@@ -1,0 +1,10 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'sample.blg'
+[21] biber:313> INFO - === Fri Dec  9, 2022, 08:06:39
+[41] Biber.pm:371> INFO - Reading 'sample.bcf'
+[94] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
+[99] Utils.pm:169> WARN - The file 'sample.bcf' does not contain any citations!
+[105] bbl.pm:617> INFO - Writing 'sample.bbl' with encoding 'UTF-8'
+[105] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
+[106] bbl.pm:720> INFO - Output to sample.bbl
+[106] Biber.pm:110> INFO - WARNINGS: 1
