@@ -1924,6 +1924,10 @@
     <bcf:datasource type="file" datatype="bibtex">./src/bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">Gatys_2016_CVPR</bcf:citekey>
+    <bcf:citekey order="2">Gatys_2016_CVPR</bcf:citekey>
+    <bcf:citekey order="3">Huang_2019_ICCV</bcf:citekey>
+    <bcf:citekey order="4">liu2021paint</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

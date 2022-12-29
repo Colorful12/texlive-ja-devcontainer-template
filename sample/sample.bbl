@@ -16,5 +16,133 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Gatys_2016_CVPR}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=98ad402dba03137f35fb35aa956ea7eb}{%
+           family={Gatys},
+           familyi={G\bibinitperiod},
+           given={Leon\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=cb8ffacfdbd03bb824fed19af1279ef1}{%
+           family={Ecker},
+           familyi={E\bibinitperiod},
+           given={Alexander\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=653ad8c2337d9615a186b743cc8d69a5}{%
+           family={Bethge},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5fb13665b91b2c24a77d315643787a30}
+      \strng{fullhash}{5fb13665b91b2c24a77d315643787a30}
+      \strng{bibnamehash}{5fb13665b91b2c24a77d315643787a30}
+      \strng{authorbibnamehash}{5fb13665b91b2c24a77d315643787a30}
+      \strng{authornamehash}{5fb13665b91b2c24a77d315643787a30}
+      \strng{authorfullhash}{5fb13665b91b2c24a77d315643787a30}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
+      \field{month}{6}
+      \field{title}{Image Style Transfer Using Convolutional Neural Networks}
+      \field{year}{2016}
+    \endentry
+    \entry{Huang_2019_ICCV}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=fbc9a230a139d88c80eacff92a40be70}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zhewei},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=d8d198d445e9adc343e3db89f7ba5da6}{%
+           family={Heng},
+           familyi={H\bibinitperiod},
+           given={Wen},
+           giveni={W\bibinitperiod}}}%
+        {{hash=9bc063c8ab4edfc0f7569e426c971cf9}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Shuchang},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
+      \strng{fullhash}{558d65b8c2e2ab938d7a752d5c12a3b6}
+      \strng{bibnamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
+      \strng{authorbibnamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
+      \strng{authornamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
+      \strng{authorfullhash}{558d65b8c2e2ab938d7a752d5c12a3b6}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}
+      \field{month}{10}
+      \field{title}{Learning to Paint With Model-Based Deep Reinforcement Learning}
+      \field{year}{2019}
+    \endentry
+    \entry{liu2021paint}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{hash=3bd26b454930917da524813d140b7c94}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Songhua},
+           giveni={S\bibinitperiod}}}%
+        {{hash=389ddab7ddd2acfc886e3b36408d8c77}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Tianwei},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fd664bf187714cacceb88ee6d8eec7ee}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Dongliang},
+           giveni={D\bibinitperiod}}}%
+        {{hash=dc2b8ed5cfa2d4c57a22716a30346285}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Fu},
+           giveni={F\bibinitperiod}}}%
+        {{hash=57720f3f0831798bb9b3262340a894c5}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Ruifeng},
+           giveni={R\bibinitperiod}}}%
+        {{hash=86d8cd66cb62928ca1ec636d8cd2e11c}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=515f5244812213e3026ec84432c70b0a}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Errui},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c8cf19241225247d6d07dbf8a516b8ed}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{f3b681b0e257d1924f68aa544d072d58}
+      \strng{fullhash}{df7fb1aaaa32d3f14562e6fc990d8935}
+      \strng{bibnamehash}{df7fb1aaaa32d3f14562e6fc990d8935}
+      \strng{authorbibnamehash}{df7fb1aaaa32d3f14562e6fc990d8935}
+      \strng{authornamehash}{f3b681b0e257d1924f68aa544d072d58}
+      \strng{authorfullhash}{df7fb1aaaa32d3f14562e6fc990d8935}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE International Conference on Computer Vision}
+      \field{title}{Paint Transformer: Feed Forward Neural Painting with Stroke Prediction}
+      \field{year}{2021}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

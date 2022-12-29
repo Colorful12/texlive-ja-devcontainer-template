@@ -1,10 +1,19 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'sample.blg'
-[21] biber:313> INFO - === Fri Dec 16, 2022, 17:32:58
-[42] Biber.pm:371> INFO - Reading 'sample.bcf'
-[93] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
-[98] Utils.pm:169> WARN - The file 'sample.bcf' does not contain any citations!
-[105] bbl.pm:617> INFO - Writing 'sample.bbl' with encoding 'UTF-8'
-[105] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
-[105] bbl.pm:720> INFO - Output to sample.bbl
-[106] Biber.pm:110> INFO - WARNINGS: 1
+[27] biber:313> INFO - === Wed Dec 28, 2022, 21:47:39
+[51] Biber.pm:371> INFO - Reading 'sample.bcf'
+[109] Biber.pm:857> INFO - Found 3 citekeys in bib section 0
+[120] Biber.pm:3981> INFO - Processing section 0
+[130] Biber.pm:4154> INFO - Looking for bibtex format file './src/bibliography.bib' for section 0
+[130] bibtex.pm:1468> INFO - LaTeX decoding ...
+[136] bibtex.pm:1294> INFO - Found BibTeX data source './src/bibliography.bib'
+[142] Utils.pm:169> WARN - month field 'June' in entry 'Gatys_2016_CVPR' is not an integer - this will probably not sort properly.
+[148] Utils.pm:169> WARN - month field 'October' in entry 'Huang_2019_ICCV' is not an integer - this will probably not sort properly.
+[167] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[167] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[167] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[167] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[170] bbl.pm:617> INFO - Writing 'sample.bbl' with encoding 'UTF-8'
+[170] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
+[174] bbl.pm:720> INFO - Output to sample.bbl
+[175] Biber.pm:110> INFO - WARNINGS: 2
