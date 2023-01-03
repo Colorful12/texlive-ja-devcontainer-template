@@ -1,19 +1,20 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'sample.blg'
-[27] biber:313> INFO - === Wed Dec 28, 2022, 21:47:39
-[51] Biber.pm:371> INFO - Reading 'sample.bcf'
-[109] Biber.pm:857> INFO - Found 3 citekeys in bib section 0
-[120] Biber.pm:3981> INFO - Processing section 0
-[130] Biber.pm:4154> INFO - Looking for bibtex format file './src/bibliography.bib' for section 0
-[130] bibtex.pm:1468> INFO - LaTeX decoding ...
-[136] bibtex.pm:1294> INFO - Found BibTeX data source './src/bibliography.bib'
-[142] Utils.pm:169> WARN - month field 'June' in entry 'Gatys_2016_CVPR' is not an integer - this will probably not sort properly.
-[148] Utils.pm:169> WARN - month field 'October' in entry 'Huang_2019_ICCV' is not an integer - this will probably not sort properly.
-[167] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[167] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[167] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[167] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[170] bbl.pm:617> INFO - Writing 'sample.bbl' with encoding 'UTF-8'
-[170] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
-[174] bbl.pm:720> INFO - Output to sample.bbl
-[175] Biber.pm:110> INFO - WARNINGS: 2
+[22] biber:313> INFO - === Tue Jan  3, 2023, 16:33:03
+[42] Biber.pm:371> INFO - Reading 'sample.bcf'
+[97] Biber.pm:857> INFO - Found 6 citekeys in bib section 0
+[109] Biber.pm:3981> INFO - Processing section 0
+[118] Biber.pm:4154> INFO - Looking for bibtex format file './src/bibliography.bib' for section 0
+[119] bibtex.pm:1468> INFO - LaTeX decoding ...
+[129] bibtex.pm:1294> INFO - Found BibTeX data source './src/bibliography.bib'
+[145] Utils.pm:169> WARN - month field 'June' in entry 'Gatys_2016_CVPR' is not an integer - this will probably not sort properly.
+[151] Utils.pm:169> WARN - month field 'October' in entry 'Huang_2019_ICCV' is not an integer - this will probably not sort properly.
+[162] Utils.pm:169> WARN - BibTeX subsystem: /tmp/shhMJXWhTl/bibliography.bib_940333.utf8, line 42, warning: 15 characters of junk seen at toplevel
+[172] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[172] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[172] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[172] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[180] bbl.pm:617> INFO - Writing 'sample.bbl' with encoding 'UTF-8'
+[181] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
+[189] bbl.pm:720> INFO - Output to sample.bbl
+[190] Biber.pm:110> INFO - WARNINGS: 3

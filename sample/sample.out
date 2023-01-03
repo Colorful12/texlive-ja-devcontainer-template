@@ -4,14 +4,15 @@
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 4
 \BOOKMARK [1][-]{section.2.1}{Machine Learning}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.2}{Neural Networks}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.3}{Convolutional Neural Network}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.4}{Transformers}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.5}{Autoencoders}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Related Works}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Image Style Transfer}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{強化学習版}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Learn to PaintのCNN版}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Methodology}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Loss Function}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Experiments and Results}{}% 16
-\BOOKMARK [0][-]{chapter.6}{Discussions}{}% 17
+\BOOKMARK [1][-]{section.2.3}{Deep Learning}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.4}{Convolutional Neural Network}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.5}{Transformers}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.6}{まだ何か必要だと思う}{chapter.2}% 10
+\BOOKMARK [0][-]{chapter.3}{Related Works}{}% 11
+\BOOKMARK [1][-]{section.3.1}{Image Style Transfer}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.2}{強化学習版}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.3}{Learn to PaintのCNN版}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Methodology}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Loss Function}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{Experiments and Results}{}% 17
+\BOOKMARK [0][-]{chapter.6}{Discussions}{}% 18

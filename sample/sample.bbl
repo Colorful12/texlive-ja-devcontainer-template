@@ -19,6 +19,103 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{titanic}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=78586408cecaf410ec1aa70b255417d7}{%
+           family={Jessica\bibnamedelima Li},
+           familyi={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Will\bibnamedelima Cukierski},
+           giveni={W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Kaggle}%
+      }
+      \strng{namehash}{78586408cecaf410ec1aa70b255417d7}
+      \strng{fullhash}{78586408cecaf410ec1aa70b255417d7}
+      \strng{bibnamehash}{78586408cecaf410ec1aa70b255417d7}
+      \strng{authorbibnamehash}{78586408cecaf410ec1aa70b255417d7}
+      \strng{authornamehash}{78586408cecaf410ec1aa70b255417d7}
+      \strng{authorfullhash}{78586408cecaf410ec1aa70b255417d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Titanic - Machine Learning from Disaster}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://kaggle.com/competitions/titanic
+      \endverb
+      \verb{url}
+      \verb https://kaggle.com/competitions/titanic
+      \endverb
+    \endentry
+    \entry{Rosenblatt1958ThePA}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9e8511ef13d0cdda3a709b93fa650e71}{%
+           family={Rosenblatt},
+           familyi={R\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{fullhash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{bibnamehash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{authorbibnamehash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{authornamehash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{authorfullhash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological review}
+      \field{title}{The perceptron: a probabilistic model for information storage and organization in the brain.}
+      \field{volume}{65 6}
+      \field{year}{1958}
+      \field{pages}{386\bibrangedash 408}
+      \range{pages}{23}
+    \endentry
+    \entry{dastres:hal-03349542}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1a4d0b126083a50c49416b988dd35498}{%
+           family={Dastres},
+           familyi={D\bibinitperiod},
+           given={Roza},
+           giveni={R\bibinitperiod}}}%
+        {{hash=dbc19c622eb9d7c57f03660aeb94c2b2}{%
+           family={Soori},
+           familyi={S\bibinitperiod},
+           given={Mohsen},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
+      \strng{fullhash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
+      \strng{bibnamehash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
+      \strng{authorbibnamehash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
+      \strng{authornamehash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
+      \strng{authorfullhash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{International Journal of Imaging and Robotics (IJIR)}}
+      \field{month}{9}
+      \field{number}{2}
+      \field{title}{{Artificial Neural Network Systems}}
+      \field{volume}{21}
+      \field{year}{2021}
+      \field{pages}{13\bibrangedash 25}
+      \range{pages}{13}
+      \verb{file}
+      \verb https://hal.archives-ouvertes.fr/hal-03349542/file/P2-Artificial.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://hal.archives-ouvertes.fr/hal-03349542
+      \endverb
+      \verb{url}
+      \verb https://hal.archives-ouvertes.fr/hal-03349542
+      \endverb
+      \keyw{Artificial Neural Networks ; Artificial Intelligence Mathematics Subject Classification: 68T01 ; 68T05 Journal of Economic Literature (JEL) Classification : C7}
+    \endentry
     \entry{Gatys_2016_CVPR}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=98ad402dba03137f35fb35aa956ea7eb}{%
@@ -43,8 +140,8 @@
       \strng{authorbibnamehash}{5fb13665b91b2c24a77d315643787a30}
       \strng{authornamehash}{5fb13665b91b2c24a77d315643787a30}
       \strng{authorfullhash}{5fb13665b91b2c24a77d315643787a30}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -76,8 +173,8 @@
       \strng{authorbibnamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
       \strng{authornamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
       \strng{authorfullhash}{558d65b8c2e2ab938d7a752d5c12a3b6}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}
@@ -134,8 +231,8 @@
       \strng{authorbibnamehash}{df7fb1aaaa32d3f14562e6fc990d8935}
       \strng{authornamehash}{f3b681b0e257d1924f68aa544d072d58}
       \strng{authorfullhash}{df7fb1aaaa32d3f14562e6fc990d8935}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE International Conference on Computer Vision}
