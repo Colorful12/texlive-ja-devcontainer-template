@@ -68,6 +68,7 @@ This can be expressed mathematically as follows:
 \end{equation}
 where $b$ is a term called bias which is a variable that determines 
 whether or not the output $y$ is set to 1.
+【活性化関数について？】
 During simple perceptron training, the goal is to find the optimal 
 weights $w_1, w_2 ... w_n$, that will produce the correct output for 
 a given set of inputs.
@@ -92,30 +93,57 @@ While Figure \ref{simple_perceptron} consists of an input layer and an
 output layer, Figure \ref{multilayer_perceptron} has an additional hidden 
 layer. The addition of this hidden layer let the network capture nonlinear
 relationships between input data and output data.
+In Figre \ref{multilayer_perceptron}, there is only one hidden layer,
+but it is possible to have multiple hidden layers in a multi-layer perceptron.
 
-隠れ層を2対上にしたものもMLP。
-多層パーセプトロンよりも隠れ層を増やせば、より複雑な関数が表現できるのでは？
-で、ディープラーニングの導入。
+\section{Deep Neural Network}
+　There is an area of neural networks called deep learning. 
+It used used deep neural networks (DNNs), which are characterized by their structure
+of having three or more layers, including one or more hidden layers, as models \cite{8114708}.
+As previously mentioned, the addition of a hidden layer to a simple perceptron 
+enables the creation of a multilayer perceptron, which is capable of learning 
+nonlinear relationships. 
+Intuitively, it makes sense that a multilayer perceptron with additional 
+hidden layers would be able to represent more complex relationships.
+This is the concept behind DNNs, which get their name from the fact that they 
+have multiple \textit{deep} layers of neurons.
+Since DNNs are also a kind of a machine learning algorithm, the goal of learning
+for the network is determining the best values of the weights and biases. 
+Running the program with the learned weights is called \textit{inference}.
 
-\cite{dastres:hal-03349542}
-
-\section{Deep Learning}
-隠れ層を増やしたニューラルネットワーク。層が"深い"からDeep Learning。
-ディープラーニングネットワークの画像。(これはあくまで基本形)
-活性化関数につなげる方法が難しい～
-【やっぱ活性化関数について単純パーセプトロンか多層パーセプトロンのとこで
-説明するべきだったか。。。】
+Deep learning has been successfully applied in many such as medical department \cite{medical}, 
+self-driving \cite{do2018real}, translation \cite{translation}, art \cite{zou2020stylized},
+interior design \cite{interior}, and more.
+As we mentioned before, the basic form of deep neural network is a neural network with 
+multiple hidden layers, but in the fields addressing image and time series data,
+specialized neural network architectures are utilized to better suit the 
+characteristics of those types of data.
 
 \section{Convolutional Neural Network}
-画像データを対象とする場合に用いる。(通常のNNでも画像は適用できるが、
+　Convolutional Neural Network (CNN) is a type of deep neural metworks.
+CNNs = one of the deep learning architectures
+画像データを対象とする場合に用いる。まずは画像データの取扱いについて説明する。
+
+https://arxiv.org/abs/1511.08458 を使うよ
+
+(通常のNNでも画像は適用できるが、
 要素を縦一列にしないといけない。画像は縦横の位置情報が重要。一列に
 してしまっては重要なデータが失われる。二次元のまま利用できるのが理想)
 で、うまれたのがCNN。画像を二次元のまま入力に用いることができる。
+CNNは3つのレイヤーからできている。3つのレイヤーの羅列。
+MINISTの画像を例に、入力->出力の流れを簡単に説明。
+(simply understanding the overall architecture of a CNN architecture)
+それぞれのレイヤーについて説明していく。
+(We will now explore in detail the individual layers...)
+convolutional layersについての説明
+
+pooling layersについての説明
+
+fully-connected layersについての説明
+
 
 畳み込みとかプーリング、全結合とかはここで説明する。
 
 \section{Transformers}
 あああああああああああ
 
-\section{まだ何か必要だと思う} 
-ああああああああああああ

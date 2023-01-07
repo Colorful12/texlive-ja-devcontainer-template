@@ -74,47 +74,288 @@
       \field{pages}{386\bibrangedash 408}
       \range{pages}{23}
     \endentry
-    \entry{dastres:hal-03349542}{article}{}
-      \name{author}{2}{}{%
-        {{hash=1a4d0b126083a50c49416b988dd35498}{%
-           family={Dastres},
-           familyi={D\bibinitperiod},
-           given={Roza},
-           giveni={R\bibinitperiod}}}%
-        {{hash=dbc19c622eb9d7c57f03660aeb94c2b2}{%
-           family={Soori},
+    \entry{8114708}{article}{}
+      \name{author}{4}{}{%
+        {{hash=cbbe965642aa62eec9d6846f1693beb7}{%
+           family={Sze},
            familyi={S\bibinitperiod},
-           given={Mohsen},
-           giveni={M\bibinitperiod}}}%
+           given={Vivienne},
+           giveni={V\bibinitperiod}}}%
+        {{hash=226e2eb4b14e0b169bb783cf6b83c3ce}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yu-Hsin},
+           giveni={Y\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=89115e522fc2b8d49a429918a3c45e0b}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Tien-Ju},
+           giveni={T\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=6edd3a04f457f516fb73537b4cde0baf}{%
+           family={Emer},
+           familyi={E\bibinitperiod},
+           given={Joel\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
       }
-      \strng{namehash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
-      \strng{fullhash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
-      \strng{bibnamehash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
-      \strng{authorbibnamehash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
-      \strng{authornamehash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
-      \strng{authorfullhash}{d9287b57ba3aaf78aaabd6d73bfb6a61}
+      \strng{namehash}{cce959309d2e11243ff04df231904f56}
+      \strng{fullhash}{371613c5d993e535cedaf83869011965}
+      \strng{bibnamehash}{371613c5d993e535cedaf83869011965}
+      \strng{authorbibnamehash}{371613c5d993e535cedaf83869011965}
+      \strng{authornamehash}{cce959309d2e11243ff04df231904f56}
+      \strng{authorfullhash}{371613c5d993e535cedaf83869011965}
       \field{sortinit}{4}
       \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{International Journal of Imaging and Robotics (IJIR)}}
-      \field{month}{9}
-      \field{number}{2}
-      \field{title}{{Artificial Neural Network Systems}}
-      \field{volume}{21}
-      \field{year}{2021}
-      \field{pages}{13\bibrangedash 25}
-      \range{pages}{13}
-      \verb{file}
-      \verb https://hal.archives-ouvertes.fr/hal-03349542/file/P2-Artificial.pdf
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{12}
+      \field{title}{Efficient Processing of Deep Neural Networks: A Tutorial and Survey}
+      \field{volume}{105}
+      \field{year}{2017}
+      \field{pages}{2295\bibrangedash 2329}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1109/JPROC.2017.2761740
+      \endverb
+    \endentry
+    \entry{medical}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=f264e3cc26bf10a05c1f6ca7d4aa9f08}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Nan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=29552333c9a97a9a00b73e517562b786}{%
+           family={Phang},
+           familyi={P\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f92c14198ddcf723bfbcb25f23491079}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jungkyu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=342a426d664300359551c1a554037ff0}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Yiqiu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2d1dc14145abd5cf776eb1f7c167ebdf}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zhe},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=8060c598b4038deb09d13d71f16cecb5}{%
+           family={Zorin},
+           familyi={Z\bibinitperiod},
+           given={Masha},
+           giveni={M\bibinitperiod}}}%
+        {{hash=024bdc529e71ff3969ee6225753cd5e0}{%
+           family={Jastrz\k{e}bski},
+           familyi={J\bibinitperiod},
+           given={Stanis\l{}aw},
+           giveni={S\bibinitperiod}}}%
+        {{hash=651d57c159893d4e6dc3b95ad5b32709}{%
+           family={F\'{e}vry},
+           familyi={F\bibinitperiod},
+           given={Thibault},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b448e5a88accdf198cf3cb132e41c7b7}{%
+           family={Katsnelson},
+           familyi={K\bibinitperiod},
+           given={Joe},
+           giveni={J\bibinitperiod}}}%
+        {{hash=82b195c475a2bbb026423a3dec91d619}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{70098f5afce9366947b10b87737474cc}
+      \strng{fullhash}{ee5d1999f4dfb241790c26ef2afbfe55}
+      \strng{bibnamehash}{ee5d1999f4dfb241790c26ef2afbfe55}
+      \strng{authorbibnamehash}{ee5d1999f4dfb241790c26ef2afbfe55}
+      \strng{authornamehash}{70098f5afce9366947b10b87737474cc}
+      \strng{authorfullhash}{ee5d1999f4dfb241790c26ef2afbfe55}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on medical imaging}
+      \field{number}{4}
+      \field{title}{Deep neural networks improve radiologists' performance in breast cancer screening}
+      \field{volume}{39}
+      \field{year}{2019}
+      \field{pages}{1184\bibrangedash 1194}
+      \range{pages}{11}
+    \endentry
+    \entry{do2018real}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=ae3d41055eb45e8600e3b6c7dfea3d91}{%
+           family={Do},
+           familyi={D\bibinitperiod},
+           given={Truong-Dong},
+           giveni={T\bibinithyphendelim D\bibinitperiod}}}%
+        {{hash=e4dbfdc05b6c0ff5c418f1d61aa33f0e}{%
+           family={Duong},
+           familyi={D\bibinitperiod},
+           given={Minh-Thien},
+           giveni={M\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=f0da46c95281bf5000970f3f5b6a1f4f}{%
+           family={Dang},
+           familyi={D\bibinitperiod},
+           given={Quoc-Vu},
+           giveni={Q\bibinithyphendelim V\bibinitperiod}}}%
+        {{hash=0730288c89613486513924aa92851ecb}{%
+           family={Le},
+           familyi={L\bibinitperiod},
+           given={My-Ha},
+           giveni={M\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7c6bbfe74e17b73d38e3a18cf0a77f90}
+      \strng{fullhash}{795cf3bb9357919191dd05f973b72ddd}
+      \strng{bibnamehash}{795cf3bb9357919191dd05f973b72ddd}
+      \strng{authorbibnamehash}{795cf3bb9357919191dd05f973b72ddd}
+      \strng{authornamehash}{7c6bbfe74e17b73d38e3a18cf0a77f90}
+      \strng{authorfullhash}{795cf3bb9357919191dd05f973b72ddd}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 4th International Conference on Green Technology and Sustainable Development (GTSD)}
+      \field{title}{Real-time self-driving car navigation using deep neural network}
+      \field{year}{2018}
+      \field{pages}{7\bibrangedash 12}
+      \range{pages}{6}
+    \endentry
+    \entry{translation}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a396bb653c90348af9896c11064ba9eb}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Tian},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a396bb653c90348af9896c11064ba9eb}
+      \strng{fullhash}{a396bb653c90348af9896c11064ba9eb}
+      \strng{bibnamehash}{a396bb653c90348af9896c11064ba9eb}
+      \strng{authorbibnamehash}{a396bb653c90348af9896c11064ba9eb}
+      \strng{authornamehash}{a396bb653c90348af9896c11064ba9eb}
+      \strng{authorfullhash}{a396bb653c90348af9896c11064ba9eb}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical Problems in Engineering}
+      \field{month}{03}
+      \field{title}{Deep Learning Classification Model for English Translation Styles Introducing Attention Mechanism}
+      \field{volume}{2022}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1155/2022/6798505
+      \endverb
+    \endentry
+    \entry{zou2020stylized}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=79ecb3ddec80cff3d752091ba8cc0113}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Zhengxia},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=7455627e3d4c49bcfca8894a04f6a86b}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Tianyang},
+           giveni={T\bibinitperiod}}}%
+        {{hash=30eb666a436500d30a5fdda54be18030}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Shuang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=87fc2c8a08c64fda30beca1a91201774}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a163a5390bc6150e96c215cfd4d1f35f}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Zhenwei},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{7d8402352d392500aa0f362bf1b52e49}
+      \strng{fullhash}{e0eb4926bb16620f81f04f33d10ea5c4}
+      \strng{bibnamehash}{e0eb4926bb16620f81f04f33d10ea5c4}
+      \strng{authorbibnamehash}{e0eb4926bb16620f81f04f33d10ea5c4}
+      \strng{authornamehash}{7d8402352d392500aa0f362bf1b52e49}
+      \strng{authorfullhash}{e0eb4926bb16620f81f04f33d10ea5c4}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Stylized Neural Painting}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2011.08114
+      \endverb
+    \endentry
+    \entry{interior}{article}{}
+      \name{author}{2}{}{%
+        {{hash=66430b8659a566bd0a6f426873ec981a}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a6107ba226c1ac8bc29c118a2fc0d0a1}{%
+           family={Bala},
+           familyi={B\bibinitperiod},
+           given={Kavita},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{e269e062276339f4638e5f220e53c300}
+      \strng{fullhash}{e269e062276339f4638e5f220e53c300}
+      \strng{bibnamehash}{e269e062276339f4638e5f220e53c300}
+      \strng{authorbibnamehash}{e269e062276339f4638e5f220e53c300}
+      \strng{authornamehash}{e269e062276339f4638e5f220e53c300}
+      \strng{authorfullhash}{e269e062276339f4638e5f220e53c300}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Popular sites like Houzz, Pinterest, and LikeThatDecor, have communities of users helping each other answer questions about products in images. In this paper we learn an embedding for visual search in interior design. Our embedding contains two different domains of product images: products cropped from internet scenes, and products in their iconic form. With such a multi-domain embedding, we demonstrate several applications of visual search including identifying products in scenes and finding stylistically similar products. To obtain the embedding, we train a convolutional neural network on pairs of images. We explore several training architectures including re-purposing object classifiers, using siamese networks, and using multitask learning. We evaluate our search quantitatively and qualitatively and demonstrate high quality results for search across multiple visual domains, enabling new applications in interior design.}
+      \field{issn}{0730-0301}
+      \field{journaltitle}{ACM Trans. Graph.}
+      \field{month}{7}
+      \field{number}{4}
+      \field{title}{Learning Visual Similarity for Product Design with Convolutional Neural Networks}
+      \field{volume}{34}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1145/2766959
       \endverb
       \verb{urlraw}
-      \verb https://hal.archives-ouvertes.fr/hal-03349542
+      \verb https://doi.org/10.1145/2766959
       \endverb
       \verb{url}
-      \verb https://hal.archives-ouvertes.fr/hal-03349542
+      \verb https://doi.org/10.1145/2766959
       \endverb
-      \keyw{Artificial Neural Networks ; Artificial Intelligence Mathematics Subject Classification: 68T01 ; 68T05 Journal of Economic Literature (JEL) Classification : C7}
+      \keyw{deep learning,visual similarity,search,interior design}
     \endentry
     \entry{Gatys_2016_CVPR}{inproceedings}{}
       \name{author}{3}{}{%
@@ -140,8 +381,8 @@
       \strng{authorbibnamehash}{5fb13665b91b2c24a77d315643787a30}
       \strng{authornamehash}{5fb13665b91b2c24a77d315643787a30}
       \strng{authorfullhash}{5fb13665b91b2c24a77d315643787a30}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -173,8 +414,8 @@
       \strng{authorbibnamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
       \strng{authornamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
       \strng{authorfullhash}{558d65b8c2e2ab938d7a752d5c12a3b6}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}
@@ -231,8 +472,8 @@
       \strng{authorbibnamehash}{df7fb1aaaa32d3f14562e6fc990d8935}
       \strng{authornamehash}{f3b681b0e257d1924f68aa544d072d58}
       \strng{authorfullhash}{df7fb1aaaa32d3f14562e6fc990d8935}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE International Conference on Computer Vision}
