@@ -41,7 +41,7 @@ the guidance of labeled training data.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=130truemm]{resources/2_background/simple_perceptron.png}
+  \includegraphics[width=120truemm]{resources/2_background/simple_perceptron.png}
   \caption{
     An example of simple perceptron
   }
@@ -68,7 +68,6 @@ This can be expressed mathematically as follows:
 \end{equation}
 where $b$ is a term called bias which is a variable that determines 
 whether or not the output $y$ is set to 1.
-【活性化関数について？】
 During simple perceptron training, the goal is to find the optimal 
 weights $w_1, w_2 ... w_n$, that will produce the correct output for 
 a given set of inputs.
@@ -83,9 +82,9 @@ an input layer, a hidden layer, and an output layer.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=130truemm]{resources/2_background/multi_layer_perceptron.png}
+  \includegraphics[width=120truemm]{resources/2_background/multi_layer_perceptron.png}
   \caption{
-    An example of multi layer perceptron
+    An example of multilayer perceptron
   }
   \label{multilayer_perceptron}
 \end{figure}
@@ -95,10 +94,15 @@ layer. The addition of this hidden layer let the network capture nonlinear
 relationships between input data and output data.
 In Figre \ref{multilayer_perceptron}, there is only one hidden layer,
 but it is possible to have multiple hidden layers in a multi-layer perceptron.
+In this type of neural network, the data flows in only one direction, without 
+looping back or branching off. The models which have this structure is known
+as a feed-forward neural networks (FNNs), 
+and the structure is a key characteristic of multi-layer perceptrons.
+In this paper, we are utilizing FNNs.
 
 \section{Deep Neural Network}
 　There is an area of neural networks called deep learning. 
-It used used deep neural networks (DNNs), which are characterized by their structure
+It used deep neural networks (DNNs), which are characterized by their structure
 of having three or more layers, including one or more hidden layers, as models \cite{8114708}.
 As previously mentioned, the addition of a hidden layer to a simple perceptron 
 enables the creation of a multilayer perceptron, which is capable of learning 
@@ -120,29 +124,126 @@ specialized neural network architectures are utilized to better suit the
 characteristics of those types of data.
 
 \section{Convolutional Neural Network}
-　Convolutional Neural Network (CNN) is a type of deep neural metworks.
-CNNs = one of the deep learning architectures
-画像データを対象とする場合に用いる。まずは画像データの取扱いについて説明する。
+　Convolutional neural network (CNNs) is one of the deep learning architectures. 
+CNNs are very effective for tasks processing data with a grid-like structure, 
+such as images.
 
-https://arxiv.org/abs/1511.08458 を使うよ
+Before describing the structure of CNNs, let us explain how computers represent 
+and process image data. A digital image is composed of a grid of small elements 
+called pixels, each of which represents the intensity of light and color at 
+that location in the image.
+In color images, these values are represented by three channels: 
+red, green, and blue. Each pixel is assigned a numerical value 
+between 0 and 255 for each channel, as shown in Figure \ref{structure-of-image}.
+CNNs are designed to process this grid-like structure.
 
-(通常のNNでも画像は適用できるが、
-要素を縦一列にしないといけない。画像は縦横の位置情報が重要。一列に
-してしまっては重要なデータが失われる。二次元のまま利用できるのが理想)
-で、うまれたのがCNN。画像を二次元のまま入力に用いることができる。
-CNNは3つのレイヤーからできている。3つのレイヤーの羅列。
-MINISTの画像を例に、入力->出力の流れを簡単に説明。
-(simply understanding the overall architecture of a CNN architecture)
-それぞれのレイヤーについて説明していく。
-(We will now explore in detail the individual layers...)
-convolutional layersについての説明
-
-pooling layersについての説明
-
-fully-connected layersについての説明
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=90truemm]{resources/2_background/imagedata.png}
+  \caption{
+    Structure of a color image
+  }
+  \label{structure-of-image}
+\end{figure}
 
 
-畳み込みとかプーリング、全結合とかはここで説明する。
+\begin{figure}[b]
+  \centering
+  \includegraphics[width=70truemm]{resources/2_background/dimension.png}
+  \caption{
+    Converting 3x3 matrix data into a 9x1 vector
+  }
+  \label{converting-imageddata}
+\end{figure}
+\clearpage
+As previously mentioned, CNNs were developed specifically to process image data.
+While it is possible to use traditional neural networks, such as FNNs,
+for this purpose, the input must be arranged as a single vertical row, as depicted
+in Figure \ref{converting-imageddata}. 
+Although vertical and horizontal positional information is important for an image,
+with this approach, the vertical and horizontal positions of the pixels are lost 
+when the image is transformed into a one-dimensional format. It is optimal to 
+treat images as two-dimensional data, and this is possible using CNNs.
+
+CNNs are comprised of three types of layers:
+convolutional layers, pooling layers, and fully-connected layers.
+As the input image passes through the convolutional, pooling, and fully-connected
+layers as shown in Figure \ref{example-of-CNN}, its features are transformed and combined, resulting 
+in a set of class scores that can be used for tasks such as classification and 
+regression. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=135truemm]{resources/2_background/ex-CNN.png}
+  \caption{
+    A example of CNNs architecture,
+    taken from \cite{o2015introduction}
+  }
+  \label{example-of-CNN}
+\end{figure}
+Image \ref{example-of-CNN} is for giving a rough understanding of the overall 
+CNNs architecture.
+The architecture in the image is for MNIST \cite{deng2012mnist} classification, 
+or to determine whether the input image corresponds to any of the categories 
+0 to 9. A detailed explanations of the individual layers will follow.
+
+The convolution layer performs operations to extract features from images using 
+a filter known as a kernel.
+The kernel typically takes a size much smaller than the input image. 
+As shown in Figure \ref{convolution-process}, the convolution operation involves calculating the 
+element-wise product of the kernel and the input tensor at each position of 
+the tensor and summing the results to obtain the output value. 
+The output values obtained from calculating the convolution operation on the 
+entire input image will be tensor known as a feature map.
+The feature map, as the name implies, is a characteristic quantity 
+extracted by the kernel. By repeating the convolution operation using multiple
+kernels, multiple feature maps representing various features of the input 
+image can be generated. 
+The size of the feature map can be controlled by changing  the size of the kernel and the number 
+of pixels by which the kernel is shifted, known as the stride. 
+(The stride in image \ref{convolution-process} is 1.)
+A larger kernel size or stride will result in a smaller feature map, 
+while a smaller kernel size or stride will result in a larger feature map.
+
+
+The pooling layer is used to reduce the size of the feature maps produced by 
+the convolutional layer, the process of which is called down-sampling. 
+One of the most commonly used pooling methods is max pooling.
+In max pooling, the output of the pooling layer is the maximum value of 
+the smallest region of the input feature map. 
+The small region is typically a square window with a fixed size, and the maximum
+value within this window is taken as the output for the pooling layer at that position.
+The example of this process is as shown in Figure \ref{max-pooling}.
+Besides max pooling, there is mean pooling, which takes the average of 
+a small region of the input feature map. 
+Pooling process reduces the size of the feature map and the number of parameters 
+in the model, which helps to reduce overfitting.
+\vspace{1.2cm}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=100truemm]{resources/2_background/max_pooling.png}
+  \caption{
+    An example of max pooling,
+    taken from \cite{yamashita2018convolutional}
+  }
+  \label{max-pooling}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=110truemm]{resources/2_background/ex-convolution.png}
+  \caption{
+    Examples of convolution operation,
+    taken from \cite{yamashita2018convolutional}
+  }
+  \label{convolution-process}
+\end{figure}
+\clearpage
+
+The fully-connected layer has structures each neuron of which is connected 
+to every neuron in the previous layer. This allows for the combination of 
+the feature maps generated by the previous layers, resulting in a 
+one-dimensional output.  
 
 \section{Transformers}
 あああああああああああ

@@ -12,6 +12,8 @@
 \BOOKMARK [1][-]{section.3.2}{強化学習版}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.3}{Learn to PaintのCNN版}{chapter.3}% 13
 \BOOKMARK [0][-]{chapter.4}{Methodology}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Loss Function}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Experiments and Results}{}% 16
-\BOOKMARK [0][-]{chapter.6}{Discussions}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Baseline}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{Network structure}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.3}{Loss Function}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.5}{Experiments and Results}{}% 18
+\BOOKMARK [0][-]{chapter.6}{Discussions}{}% 19

@@ -36,8 +36,8 @@
       \strng{authorbibnamehash}{78586408cecaf410ec1aa70b255417d7}
       \strng{authornamehash}{78586408cecaf410ec1aa70b255417d7}
       \strng{authorfullhash}{78586408cecaf410ec1aa70b255417d7}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Titanic - Machine Learning from Disaster}
@@ -63,8 +63,8 @@
       \strng{authorbibnamehash}{9e8511ef13d0cdda3a709b93fa650e71}
       \strng{authornamehash}{9e8511ef13d0cdda3a709b93fa650e71}
       \strng{authorfullhash}{9e8511ef13d0cdda3a709b93fa650e71}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Psychological review}
@@ -103,8 +103,8 @@
       \strng{authorbibnamehash}{371613c5d993e535cedaf83869011965}
       \strng{authornamehash}{cce959309d2e11243ff04df231904f56}
       \strng{authorfullhash}{371613c5d993e535cedaf83869011965}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the IEEE}
@@ -182,8 +182,8 @@
       \strng{authorbibnamehash}{ee5d1999f4dfb241790c26ef2afbfe55}
       \strng{authornamehash}{70098f5afce9366947b10b87737474cc}
       \strng{authorfullhash}{ee5d1999f4dfb241790c26ef2afbfe55}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE transactions on medical imaging}
@@ -226,8 +226,8 @@
       \strng{authorbibnamehash}{795cf3bb9357919191dd05f973b72ddd}
       \strng{authornamehash}{7c6bbfe74e17b73d38e3a18cf0a77f90}
       \strng{authorfullhash}{795cf3bb9357919191dd05f973b72ddd}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2018 4th International Conference on Green Technology and Sustainable Development (GTSD)}
@@ -250,8 +250,8 @@
       \strng{authorbibnamehash}{a396bb653c90348af9896c11064ba9eb}
       \strng{authornamehash}{a396bb653c90348af9896c11064ba9eb}
       \strng{authorfullhash}{a396bb653c90348af9896c11064ba9eb}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematical Problems in Engineering}
@@ -297,8 +297,8 @@
       \strng{authorbibnamehash}{e0eb4926bb16620f81f04f33d10ea5c4}
       \strng{authornamehash}{7d8402352d392500aa0f362bf1b52e49}
       \strng{authorfullhash}{e0eb4926bb16620f81f04f33d10ea5c4}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -334,8 +334,8 @@
       \strng{authorbibnamehash}{e269e062276339f4638e5f220e53c300}
       \strng{authornamehash}{e269e062276339f4638e5f220e53c300}
       \strng{authorfullhash}{e269e062276339f4638e5f220e53c300}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Popular sites like Houzz, Pinterest, and LikeThatDecor, have communities of users helping each other answer questions about products in images. In this paper we learn an embedding for visual search in interior design. Our embedding contains two different domains of product images: products cropped from internet scenes, and products in their iconic form. With such a multi-domain embedding, we demonstrate several applications of visual search including identifying products in scenes and finding stylistically similar products. To obtain the embedding, we train a convolutional neural network on pairs of images. We explore several training architectures including re-purposing object classifiers, using siamese networks, and using multitask learning. We evaluate our search quantitatively and qualitatively and demonstrate high quality results for search across multiple visual domains, enabling new applications in interior design.}
@@ -356,6 +356,106 @@
       \verb https://doi.org/10.1145/2766959
       \endverb
       \keyw{deep learning,visual similarity,search,interior design}
+    \endentry
+    \entry{o2015introduction}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f92af5765968c6de4c1e42d397224c9c}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Keiron},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b5da23fc726b6d32ee9a3247fa6663fc}{%
+           family={Nash},
+           familyi={N\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{fullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{bibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorbibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authornamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorfullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1511.08458}
+      \field{title}{An introduction to convolutional neural networks}
+      \field{year}{2015}
+    \endentry
+    \entry{deng2012mnist}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2f5fbdc5c3cf91f62a64663cd72397b3}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2f5fbdc5c3cf91f62a64663cd72397b3}
+      \strng{fullhash}{2f5fbdc5c3cf91f62a64663cd72397b3}
+      \strng{bibnamehash}{2f5fbdc5c3cf91f62a64663cd72397b3}
+      \strng{authorbibnamehash}{2f5fbdc5c3cf91f62a64663cd72397b3}
+      \strng{authornamehash}{2f5fbdc5c3cf91f62a64663cd72397b3}
+      \strng{authorfullhash}{2f5fbdc5c3cf91f62a64663cd72397b3}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Signal Processing Magazine}
+      \field{number}{6}
+      \field{title}{The mnist database of handwritten digit images for machine learning research}
+      \field{volume}{29}
+      \field{year}{2012}
+      \field{pages}{141\bibrangedash 142}
+      \range{pages}{2}
+    \endentry
+    \entry{yamashita2018convolutional}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4e6bac4f15557c559feec7f424282c7b}{%
+           family={Yamashita},
+           familyi={Y\bibinitperiod},
+           given={Rikiya},
+           giveni={R\bibinitperiod}}}%
+        {{hash=16a50d6654c1620740e1b42ba2214918}{%
+           family={Nishio},
+           familyi={N\bibinitperiod},
+           given={Mizuho},
+           giveni={M\bibinitperiod}}}%
+        {{hash=48043b5b1f1625f5fd1c8eaa26ab4173}{%
+           family={Do},
+           familyi={D\bibinitperiod},
+           given={Richard\bibnamedelimb Kinh\bibnamedelima Gian},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=ea5c007ecf4bb5aeeb687bf69af54f6a}{%
+           family={Togashi},
+           familyi={T\bibinitperiod},
+           given={Kaori},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{1722a748678661781078219bec3dbdb4}
+      \strng{fullhash}{664704ce891eb973eccaa8b063efbcd1}
+      \strng{bibnamehash}{664704ce891eb973eccaa8b063efbcd1}
+      \strng{authorbibnamehash}{664704ce891eb973eccaa8b063efbcd1}
+      \strng{authornamehash}{1722a748678661781078219bec3dbdb4}
+      \strng{authorfullhash}{664704ce891eb973eccaa8b063efbcd1}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Insights into imaging}
+      \field{number}{4}
+      \field{title}{Convolutional neural networks: an overview and application in radiology}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{pages}{611\bibrangedash 629}
+      \range{pages}{19}
     \endentry
     \entry{Gatys_2016_CVPR}{inproceedings}{}
       \name{author}{3}{}{%
@@ -414,8 +514,8 @@
       \strng{authorbibnamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
       \strng{authornamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
       \strng{authorfullhash}{558d65b8c2e2ab938d7a752d5c12a3b6}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}
@@ -472,8 +572,8 @@
       \strng{authorbibnamehash}{df7fb1aaaa32d3f14562e6fc990d8935}
       \strng{authornamehash}{f3b681b0e257d1924f68aa544d072d58}
       \strng{authorfullhash}{df7fb1aaaa32d3f14562e6fc990d8935}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE International Conference on Computer Vision}
