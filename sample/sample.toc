@@ -22,18 +22,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Image Style Transfer}{14}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}強化学習版}{17}{section.3.2}
+\contentsline {section}{\numberline {3.2}Machine painting like a human painter : DRL}{17}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Learn to PaintのCNN版}{17}{section.3.3}
+\contentsline {section}{\numberline {3.3}Machine painting like a human painter : FNNs}{18}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Methodology}{18}{chapter.4}
+\contentsline {chapter}{\numberline {4}Methodology}{20}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Baseline}{18}{section.4.1}
+\contentsline {section}{\numberline {4.1}Baseline}{20}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Network structure}{18}{section.4.2}
+\contentsline {section}{\numberline {4.2}Network structure}{20}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Loss Function}{18}{section.4.3}
+\contentsline {section}{\numberline {4.3}Loss Function}{20}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Experiments and Results}{19}{chapter.5}
+\contentsline {chapter}{\numberline {5}Experiments and Results}{21}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Discussions}{20}{chapter.6}
+\contentsline {chapter}{\numberline {6}Discussions}{22}{chapter.6}

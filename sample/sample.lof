@@ -20,7 +20,15 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces なにかかく. Figure taken from \cite {Gatys_2016_CVPR}. }}{16}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Examples of images combining content and style, taken from \cite {Gatys_2016_CVPR}. }}{16}{figure.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The painting results generated from the model introduced in the paper, taken from \cite {Huang_2019_ICCV}. (a) : MNIST dataset from \cite {deng2012mnist}. (b) SVHN dataset from \cite {netzer2011reading}. (c) : CelebA dataset from \cite {Liu_2015_ICCV}. (d) : ImageNet dataset from \cite {russakovsky2015imagenet}. }}{17}{figure.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Parameter definition of a stroke, taken from \cite {liu2021paint}. }}{18}{figure.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces A pipeline for Paint Transformer, taken from \cite {liu2021paint}. }}{19}{figure.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The painting results generated from Paint Transformer, taken from \cite {liu2021paint}. }}{19}{figure.3.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

@@ -36,8 +36,8 @@
       \strng{authorbibnamehash}{78586408cecaf410ec1aa70b255417d7}
       \strng{authornamehash}{78586408cecaf410ec1aa70b255417d7}
       \strng{authorfullhash}{78586408cecaf410ec1aa70b255417d7}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Titanic - Machine Learning from Disaster}
@@ -63,8 +63,8 @@
       \strng{authorbibnamehash}{9e8511ef13d0cdda3a709b93fa650e71}
       \strng{authornamehash}{9e8511ef13d0cdda3a709b93fa650e71}
       \strng{authorfullhash}{9e8511ef13d0cdda3a709b93fa650e71}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Psychological review}
@@ -103,8 +103,8 @@
       \strng{authorbibnamehash}{371613c5d993e535cedaf83869011965}
       \strng{authornamehash}{cce959309d2e11243ff04df231904f56}
       \strng{authorfullhash}{371613c5d993e535cedaf83869011965}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the IEEE}
@@ -182,8 +182,8 @@
       \strng{authorbibnamehash}{ee5d1999f4dfb241790c26ef2afbfe55}
       \strng{authornamehash}{70098f5afce9366947b10b87737474cc}
       \strng{authorfullhash}{ee5d1999f4dfb241790c26ef2afbfe55}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE transactions on medical imaging}
@@ -226,8 +226,8 @@
       \strng{authorbibnamehash}{795cf3bb9357919191dd05f973b72ddd}
       \strng{authornamehash}{7c6bbfe74e17b73d38e3a18cf0a77f90}
       \strng{authorfullhash}{795cf3bb9357919191dd05f973b72ddd}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2018 4th International Conference on Green Technology and Sustainable Development (GTSD)}
@@ -334,8 +334,8 @@
       \strng{authorbibnamehash}{e269e062276339f4638e5f220e53c300}
       \strng{authornamehash}{e269e062276339f4638e5f220e53c300}
       \strng{authorfullhash}{e269e062276339f4638e5f220e53c300}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Popular sites like Houzz, Pinterest, and LikeThatDecor, have communities of users helping each other answer questions about products in images. In this paper we learn an embedding for visual search in interior design. Our embedding contains two different domains of product images: products cropped from internet scenes, and products in their iconic form. With such a multi-domain embedding, we demonstrate several applications of visual search including identifying products in scenes and finding stylistically similar products. To obtain the embedding, we train a convolutional neural network on pairs of images. We explore several training architectures including re-purposing object classifiers, using siamese networks, and using multitask learning. We evaluate our search quantitatively and qualitatively and demonstrate high quality results for search across multiple visual domains, enabling new applications in interior design.}
@@ -376,8 +376,8 @@
       \strng{authorbibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
       \strng{authornamehash}{1e0b31097f3d41e61dd78e46b147642a}
       \strng{authorfullhash}{1e0b31097f3d41e61dd78e46b147642a}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1511.08458}
@@ -401,8 +401,8 @@
       \strng{authorbibnamehash}{2f5fbdc5c3cf91f62a64663cd72397b3}
       \strng{authornamehash}{2f5fbdc5c3cf91f62a64663cd72397b3}
       \strng{authorfullhash}{2f5fbdc5c3cf91f62a64663cd72397b3}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Signal Processing Magazine}
@@ -445,8 +445,8 @@
       \strng{authorbibnamehash}{664704ce891eb973eccaa8b063efbcd1}
       \strng{authornamehash}{1722a748678661781078219bec3dbdb4}
       \strng{authorfullhash}{664704ce891eb973eccaa8b063efbcd1}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Insights into imaging}
@@ -481,8 +481,8 @@
       \strng{authorbibnamehash}{5fb13665b91b2c24a77d315643787a30}
       \strng{authornamehash}{5fb13665b91b2c24a77d315643787a30}
       \strng{authorfullhash}{5fb13665b91b2c24a77d315643787a30}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -522,6 +522,166 @@
       \field{month}{10}
       \field{title}{Learning to Paint With Model-Based Deep Reinforcement Learning}
       \field{year}{2019}
+    \endentry
+    \entry{netzer2011reading}{article}{}
+      \name{author}{6}{}{%
+        {{hash=0f7e4a0d497b3c8d2f7ee118c56a3648}{%
+           family={Netzer},
+           familyi={N\bibinitperiod},
+           given={Yuval},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ad1506e9f10da2cad4389eac16751647}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2a6ca55dc46029c413e9054d19502b28}{%
+           family={Coates},
+           familyi={C\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ca74d879be333e3c866921ac0675fcc4}{%
+           family={Bissacco},
+           familyi={B\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a3467545efc97f24be8a5d66e4c70ab4}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=799b172b8d02b7acdf21d0cc48934fca}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Andrew\bibnamedelima Y},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{fdbe2c9aba77919178f973bd16d5f0bf}
+      \strng{fullhash}{cbf7dcfe2a2d497672b6f183f06ab219}
+      \strng{bibnamehash}{cbf7dcfe2a2d497672b6f183f06ab219}
+      \strng{authorbibnamehash}{cbf7dcfe2a2d497672b6f183f06ab219}
+      \strng{authornamehash}{fdbe2c9aba77919178f973bd16d5f0bf}
+      \strng{authorfullhash}{cbf7dcfe2a2d497672b6f183f06ab219}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reading digits in natural images with unsupervised feature learning}
+      \field{year}{2011}
+    \endentry
+    \entry{Liu_2015_ICCV}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=15a5322a1b261fe95ac6e04758acf39c}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ziwei},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e85079235b2a8c88ee9360e55b37523a}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ping},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e88500bd6ca50746707a22554761b61a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaogang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7e09524e32e7b51c169850f848787677}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Xiaoou},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7bdb516de3f677f5e804b220b433f63}
+      \strng{fullhash}{8e39318bdba17f8e188f5c3f4b8e03b6}
+      \strng{bibnamehash}{8e39318bdba17f8e188f5c3f4b8e03b6}
+      \strng{authorbibnamehash}{8e39318bdba17f8e188f5c3f4b8e03b6}
+      \strng{authornamehash}{b7bdb516de3f677f5e804b220b433f63}
+      \strng{authorfullhash}{8e39318bdba17f8e188f5c3f4b8e03b6}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE International Conference on Computer Vision (ICCV)}
+      \field{month}{12}
+      \field{title}{Deep Learning Face Attributes in the Wild}
+      \field{year}{2015}
+    \endentry
+    \entry{russakovsky2015imagenet}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=2a74ec28b731b015747e2af5f0b519e1}{%
+           family={Russakovsky},
+           familyi={R\bibinitperiod},
+           given={Olga},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0ae7fdc13773f928525f673b05f37149}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Jia},
+           giveni={J\bibinitperiod}}}%
+        {{hash=18c26ddba8b9dd77f278213fd4e93ce4}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bdb3759bbe6ab0618874848557abd459}{%
+           family={Krause},
+           familyi={K\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=434c8ee62c507c93be09958bae942da5}{%
+           family={Satheesh},
+           familyi={S\bibinitperiod},
+           given={Sanjeev},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e3f8564120f7528479a3ea1b507bd705}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6e8d947dd72de23b8500095b595e1e99}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zhiheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e91a4c2044bccdbef249eabc886ff988}{%
+           family={Karpathy},
+           familyi={K\bibinitperiod},
+           given={Andrej},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c8d6add84efe17681e0d4968ebf47fdc}{%
+           family={Khosla},
+           familyi={K\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9c5821708eb9cc9bc6c92c66ada53892}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2975ae239ffcdc002dc8eca56f2b5e26}
+      \strng{fullhash}{02269a963f3dd2d4cd3516e184f1fb29}
+      \strng{bibnamehash}{02269a963f3dd2d4cd3516e184f1fb29}
+      \strng{authorbibnamehash}{02269a963f3dd2d4cd3516e184f1fb29}
+      \strng{authornamehash}{2975ae239ffcdc002dc8eca56f2b5e26}
+      \strng{authorfullhash}{02269a963f3dd2d4cd3516e184f1fb29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International journal of computer vision}
+      \field{number}{3}
+      \field{title}{Imagenet large scale visual recognition challenge}
+      \field{volume}{115}
+      \field{year}{2015}
+      \field{pages}{211\bibrangedash 252}
+      \range{pages}{42}
     \endentry
     \entry{liu2021paint}{inproceedings}{}
       \name{author}{8}{}{%
@@ -572,8 +732,8 @@
       \strng{authorbibnamehash}{df7fb1aaaa32d3f14562e6fc990d8935}
       \strng{authornamehash}{f3b681b0e257d1924f68aa544d072d58}
       \strng{authorfullhash}{df7fb1aaaa32d3f14562e6fc990d8935}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE International Conference on Computer Vision}

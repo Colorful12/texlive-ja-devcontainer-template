@@ -1924,23 +1924,38 @@
     <bcf:datasource type="file" datatype="bibtex">./src/bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="5">titanic</bcf:citekey>
-    <bcf:citekey order="6">Rosenblatt1958ThePA</bcf:citekey>
-    <bcf:citekey order="7">8114708</bcf:citekey>
-    <bcf:citekey order="8">medical</bcf:citekey>
-    <bcf:citekey order="9">do2018real</bcf:citekey>
-    <bcf:citekey order="10">translation</bcf:citekey>
-    <bcf:citekey order="11">zou2020stylized</bcf:citekey>
-    <bcf:citekey order="12">interior</bcf:citekey>
-    <bcf:citekey order="13">o2015introduction</bcf:citekey>
-    <bcf:citekey order="14">deng2012mnist</bcf:citekey>
-    <bcf:citekey order="15">yamashita2018convolutional</bcf:citekey>
-    <bcf:citekey order="16">yamashita2018convolutional</bcf:citekey>
-    <bcf:citekey order="17">Gatys_2016_CVPR</bcf:citekey>
-    <bcf:citekey order="18">Gatys_2016_CVPR</bcf:citekey>
-    <bcf:citekey order="19">Gatys_2016_CVPR</bcf:citekey>
-    <bcf:citekey order="20">Huang_2019_ICCV</bcf:citekey>
-    <bcf:citekey order="21">liu2021paint</bcf:citekey>
+    <bcf:citekey order="13">titanic</bcf:citekey>
+    <bcf:citekey order="14">Rosenblatt1958ThePA</bcf:citekey>
+    <bcf:citekey order="15">8114708</bcf:citekey>
+    <bcf:citekey order="16">medical</bcf:citekey>
+    <bcf:citekey order="17">do2018real</bcf:citekey>
+    <bcf:citekey order="18">translation</bcf:citekey>
+    <bcf:citekey order="19">zou2020stylized</bcf:citekey>
+    <bcf:citekey order="20">interior</bcf:citekey>
+    <bcf:citekey order="21">o2015introduction</bcf:citekey>
+    <bcf:citekey order="22">deng2012mnist</bcf:citekey>
+    <bcf:citekey order="23">yamashita2018convolutional</bcf:citekey>
+    <bcf:citekey order="24">yamashita2018convolutional</bcf:citekey>
+    <bcf:citekey order="25">Gatys_2016_CVPR</bcf:citekey>
+    <bcf:citekey order="26">Gatys_2016_CVPR</bcf:citekey>
+    <bcf:citekey order="27">Gatys_2016_CVPR</bcf:citekey>
+    <bcf:citekey order="28">Gatys_2016_CVPR</bcf:citekey>
+    <bcf:citekey order="29">Huang_2019_ICCV</bcf:citekey>
+    <bcf:citekey order="30">Huang_2019_ICCV</bcf:citekey>
+    <bcf:citekey order="31">deng2012mnist</bcf:citekey>
+    <bcf:citekey order="32">netzer2011reading</bcf:citekey>
+    <bcf:citekey order="33">Liu_2015_ICCV</bcf:citekey>
+    <bcf:citekey order="34">russakovsky2015imagenet</bcf:citekey>
+    <bcf:citekey order="35">Huang_2019_ICCV</bcf:citekey>
+    <bcf:citekey order="36">deng2012mnist</bcf:citekey>
+    <bcf:citekey order="37">netzer2011reading</bcf:citekey>
+    <bcf:citekey order="38">Liu_2015_ICCV</bcf:citekey>
+    <bcf:citekey order="39">russakovsky2015imagenet</bcf:citekey>
+    <bcf:citekey order="40">liu2021paint</bcf:citekey>
+    <bcf:citekey order="41">liu2021paint</bcf:citekey>
+    <bcf:citekey order="42">liu2021paint</bcf:citekey>
+    <bcf:citekey order="43">liu2021paint</bcf:citekey>
+    <bcf:citekey order="44">liu2021paint</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

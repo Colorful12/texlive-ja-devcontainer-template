@@ -9,8 +9,8 @@
 \BOOKMARK [1][-]{section.2.5}{Transformers}{chapter.2}% 9
 \BOOKMARK [0][-]{chapter.3}{Related Works}{}% 10
 \BOOKMARK [1][-]{section.3.1}{Image Style Transfer}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{強化学習版}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Learn to PaintのCNN版}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Machine painting like a human painter : DRL}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Machine painting like a human painter : FNNs}{chapter.3}% 13
 \BOOKMARK [0][-]{chapter.4}{Methodology}{}% 14
 \BOOKMARK [1][-]{section.4.1}{Baseline}{chapter.4}% 15
 \BOOKMARK [1][-]{section.4.2}{Network structure}{chapter.4}% 16
