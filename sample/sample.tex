@@ -1,19 +1,21 @@
-\documentclass[a4paper, oneside, uplatex, 12pt]{book}
+\documentclass[a4paper, oneside, 12pt, dvipdfmx]{book}
 
 \usepackage[backend=biber,style=ieee]{biblatex}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{latexsym}
 \usepackage{bmpsize}
+\usepackage{booktabs}
+\usepackage{siunitx}
 \usepackage{url}
 \usepackage{comment}
 \usepackage{hyperref}
 \usepackage[T1]{fontenc} %for polish alphabet
 \usepackage{nameref} % for in-doc references | \labal{} |  \ref{}  \nameref{}
+\usepackage{amsmath,amssymb} % for expectation sign
+\usepackage[vlined, ruled]{algorithm2e}
+\usepackage{amsmath,amssymb} % for expectation sign
+\usepackage[vlined, ruled]{algorithm2e}
 
-\def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
-\def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
-
-\newcommand{\ttt}[1]{\texttt{#1}}
 
 %% bibliography
 \addbibresource{./src/bibliography.bib}

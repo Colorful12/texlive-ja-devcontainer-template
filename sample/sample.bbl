@@ -297,8 +297,8 @@
       \strng{authorbibnamehash}{e0eb4926bb16620f81f04f33d10ea5c4}
       \strng{authornamehash}{7d8402352d392500aa0f362bf1b52e49}
       \strng{authorfullhash}{e0eb4926bb16620f81f04f33d10ea5c4}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -457,6 +457,64 @@
       \field{pages}{611\bibrangedash 629}
       \range{pages}{19}
     \endentry
+    \entry{vaswani2017attention}{article}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7bbdae5621c6f09903617b173df234c7}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={\L{}ukasz},
+           giveni={\L{}\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{7cc810834e9ba19dd5f8b0a37be3172d}
+      \strng{fullhash}{5ebf9ec4af83719e366222380f61ee89}
+      \strng{bibnamehash}{5ebf9ec4af83719e366222380f61ee89}
+      \strng{authorbibnamehash}{5ebf9ec4af83719e366222380f61ee89}
+      \strng{authornamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
+      \strng{authorfullhash}{5ebf9ec4af83719e366222380f61ee89}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Attention is all you need}
+      \field{volume}{30}
+      \field{year}{2017}
+    \endentry
     \entry{Gatys_2016_CVPR}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=98ad402dba03137f35fb35aa956ea7eb}{%
@@ -514,8 +572,8 @@
       \strng{authorbibnamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
       \strng{authornamehash}{558d65b8c2e2ab938d7a752d5c12a3b6}
       \strng{authorfullhash}{558d65b8c2e2ab938d7a752d5c12a3b6}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}
