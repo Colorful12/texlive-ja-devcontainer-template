@@ -1,7 +1,50 @@
 \chapter{Introduction}
 \section{Aim and Motivation}
-　最後に書く！！！！！！
- 
+　Humans have found value in expressing their emotions and thoughts through 
+painting. Painting is considered the best way to enhance human imagination. 
+Before the advent of digital illustration, painting was considered something 
+that was difficult to start as it required tools and supplies such as paint 
+and brushes. With the development of digital illustration, anyone can easily 
+paint by obtaining the necessary hardware and software.
+However, to create great works, it is necessary to learn about composition, 
+sketching techniques, color and lighting effects, and this can take a long 
+time to master. Recently, the technology of computer-generated art has also 
+developed, allowing many people to easily generate their own paintings. For 
+example, Midjourney \cite{midjourney} is a software that can generate great 
+paintings by simply inputting the desired image or keywords. Midjourney is 
+popular because it is easy to use, and the generated paintings are high quality. 
+Even professional painters have a good reputation for it.
+However, for painters, regardless of whether it is digital or analog, it is 
+important to create paintings with their own hands. We would like to conduct 
+research that will lead to support for creators. 
+We set our goal  to develop a model that utilizes two input images 
+- one as a content reference and the other as a style reference - 
+and generates an output image that captures the semantic content of the content 
+reference while applying the brushstrokes of the style reference. 
+Figure \ref{haru-image} shows an example of the two input images and the output image.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=130truemm]{resources/1_introduction/haru_image.pdf}
+    \caption{
+        What we want to create.
+    } 
+    \label{haru-image}
+\end{figure}
+We consider that by using a simple brush to manually create an image like the 
+content image shown in Figure \ref{haru-image}, and then relying on the computer 
+to generate an image with the brush style of the style image shown in Figure 
+\ref{haru-image}, the painting process could be significantly streamlined for 
+artists.
+
+Recent advancements in AI technology have enabled the transformation of natural 
+images into those with an artistic style, and research on transferring styles 
+from one image to another has already been conducted \cite{Gatys_2016_CVPR}.  
+the models proposed in the study is aimed at transferring the atmosphere of the 
+image, and they also transfer the distinctive objects depicted in the style 
+reference image. 
+Our objective is to transfer the brush style while keeping the content image 
+unchanged. In this paper, we utilized a Transformer-based framework to generate 
+strokes that imitate the brush style of the reference image. 
 
 
 \section{Overview}
@@ -12,6 +55,9 @@ In Chapter 3, we introduce several papers that are related to our research.
 In Chapter 4, we explain the proposed methodologies, and Chapter 5 details 
 the experiment setup and presents the results.
 Finally, in Chapter 6 we provide a summary of the main conclusions of 
-the entire thesis.
+the entire thesis. Our proposed method didn't perfectly imitate the brush style 
+of the reference image. However, we believe that the performance of this method 
+can be improved by increasing the number of parameters used to control brush 
+strokes.
 
 

@@ -4,17 +4,23 @@
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 4
 \BOOKMARK [1][-]{section.2.1}{Machine Learning}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.2}{Neural Networks}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.3}{Deep Neural Network}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.4}{Convolutional Neural Network}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.5}{Transformer}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Deep Neural Networks}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.4}{Convolutional Neural Networks}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.5}{Transformers}{chapter.2}% 9
 \BOOKMARK [0][-]{chapter.3}{Related Works}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Image Style Transfer}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Machine painting like a human painter : DRL}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Machine painting like a human painter : FNNs}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Methodology}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Baseline}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.2}{Network structure}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.3}{Brush images}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.4}{Loss Function}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Experiments and Results}{}% 19
-\BOOKMARK [0][-]{chapter.6}{Discussions}{}% 20
+\BOOKMARK [1][-]{section.3.1}{AI Technology for Generating Pictures}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Image Style Transfer}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Machines Painting Like Human Painters: DRL}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Machines Painting Like Human Painters: FNNs}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Methodology}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Baseline}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Network Structure}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{Brush Images}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.4}{Loss Function}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.5}{Experiments and Results}{}% 20
+\BOOKMARK [1][-]{section.5.1}{Experimental Settings}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.2}{Experiments}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.3}{Results}{chapter.5}% 23
+\BOOKMARK [0][-]{chapter.6}{Discussions}{}% 24
+\BOOKMARK [1][-]{section.6.1}{Future Work}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.2}{Conclusion}{chapter.6}% 26

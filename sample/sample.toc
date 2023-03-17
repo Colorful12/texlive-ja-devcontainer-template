@@ -1,21 +1,27 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
-\contentsline {section}{\numberline {1.1}Aim and Motivation}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Overview}{4}{section.1.2}
-\contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Machine Learning}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Neural Networks}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Deep Neural Network}{8}{section.2.3}
-\contentsline {section}{\numberline {2.4}Convolutional Neural Network}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}Transformer}{13}{section.2.5}
-\contentsline {chapter}{\numberline {3}Related Works}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Image Style Transfer}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}Machine painting like a human painter : DRL}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Machine painting like a human painter : FNNs}{18}{section.3.3}
-\contentsline {chapter}{\numberline {4}Methodology}{20}{chapter.4}
-\contentsline {section}{\numberline {4.1}Baseline}{20}{section.4.1}
-\contentsline {section}{\numberline {4.2}Network structure}{20}{section.4.2}
-\contentsline {section}{\numberline {4.3}Brush images}{22}{section.4.3}
-\contentsline {section}{\numberline {4.4}Loss Function}{22}{section.4.4}
-\contentsline {chapter}{\numberline {5}Experiments and Results}{25}{chapter.5}
-\contentsline {chapter}{\numberline {6}Discussions}{26}{chapter.6}
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Aim and Motivation}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Overview}{6}{section.1.2}
+\contentsline {chapter}{\numberline {2}Background}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}Machine Learning}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Neural Networks}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Deep Neural Networks}{11}{section.2.3}
+\contentsline {section}{\numberline {2.4}Convolutional Neural Networks}{11}{section.2.4}
+\contentsline {section}{\numberline {2.5}Transformers}{16}{section.2.5}
+\contentsline {chapter}{\numberline {3}Related Works}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}AI Technology for Generating Pictures}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Image Style Transfer}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Machines Painting Like Human Painters: DRL}{21}{section.3.3}
+\contentsline {section}{\numberline {3.4}Machines Painting Like Human Painters: FNNs}{22}{section.3.4}
+\contentsline {chapter}{\numberline {4}Methodology}{24}{chapter.4}
+\contentsline {section}{\numberline {4.1}Baseline}{24}{section.4.1}
+\contentsline {section}{\numberline {4.2}Network Structure}{24}{section.4.2}
+\contentsline {section}{\numberline {4.3}Brush Images}{26}{section.4.3}
+\contentsline {section}{\numberline {4.4}Loss Function}{26}{section.4.4}
+\contentsline {chapter}{\numberline {5}Experiments and Results}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experimental Settings}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experiments}{29}{section.5.2}
+\contentsline {section}{\numberline {5.3}Results}{30}{section.5.3}
+\contentsline {chapter}{\numberline {6}Discussions}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future Work}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}Conclusion}{34}{section.6.2}

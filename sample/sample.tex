@@ -34,54 +34,69 @@
 \begin{titlepage}
 \begin{center}
     \vspace{0.1\textheight}
-    {\Large Undergraduate Thesis 2023} \\
+    {\Large Bachelor Thesis 2023} \\
+    \vspace{0.1\textheight}
+    % \includegraphics[width=48truemm]{resources/0_title/waseda_logo.png} \\
     \vspace{0.05\textheight}
-    \includegraphics[width=48truemm]{resources/0_title/waseda_logo.png} \\
-    \vspace{0.05\textheight}
-    \textbf{\huge TITLE!!!!!!!!!!!!!!!!!!!!!!!} \\
+    \textbf{\huge Brush Style Transfer with \\ Feedforward Neural Networks} \\
     \vfill
-    {\Large Supervisor \hspace{0.02\textwidth} Edgar Simo-Serra} \\
+    {\hspace{0.025\textwidth}\Large Supervisor \hspace{0.02\textwidth} Edgar Simo-Serra} \\
     {\Large Area of Study \hspace{0.02\textwidth} Computer Graphics} \\
     \vspace{0.05\textheight}
-    {\Large 
-        Waseda University \\
+    {\Large Waseda University\\}
+    \vspace{0.02\textheight}
+    {\Large
         School of Fundamental Science and Engineering \\
         Department of Computer Science and Engineering \\}
     \vspace{0.05\textheight}
     {\Large 1W192140-3 Saki Kohata \\}
     \vspace{0.05\textheight}
-    {Submitted on January.XX, 2023}
+    {Submitted on January 30, 2023}
 \end{center}
 \end{titlepage}
-    
+
+\cleardoublepage
 
 %% abstract
 \pagebreak
 \hspace{0pt}
 \vfill % magic commands to vertically center the content
     \begin{center}
-    Abstract
+        \textbf{Abstract}
     \end{center}
-　space for abstraction
+    　Creating art used to require specialized knowledge and techniques for humans,
+    but with the advancement of computer-generated art, many people can now create
+    their own artworks. AI technology has also made it possible to transform 
+    natural images into artistic style images, and there is also research on 
+    transferring style from one image to another. However, when it comes to 
+    creating tools to support creators, it is thought that transferring brush 
+    styles, instead of the atmosphere of the painting, would be more effective. 
+    In this paper, we adopt a Transformer-based model as a stroke prediction model 
+    and attempted to generate strokes that imitate the brush style of a style 
+    reference image. The generated images by the proposed model are not perfect 
+    imitations of the brush style of the reference image. This is thought to be 
+    caused by the limitation of the model to generate flexible strokes due to 
+    minimal stroke parameters.
 
-AIによる絵の生成について。Twitterで何枚の絵が生成されているかについて。
-しかし、それらは絵の仕事の現場で使えるとはいえない。
-実際の現場で使えるものをつくりたい。
-CNNを用いて～～をつくることにしました。
-～をして生成画像の精度の向上に、、、
-結果。
+\vfill
+\pagebreak
 
-【起】研究分野に関する背景・歴史・前提など
-
-【承】自分の研究課題に関する最新の研究動向
-
-【転】自分の研究課題において残されている問題点・今後の新たな展開
-
-【結】自分の研究に関する提案内容や実行結果の概要
-
-アブストラクトだけが独り歩きしても論文の全容が伝わるような構成で書く
-(結果も書くこと。)
-
+\pagebreak
+\hspace{0pt}
+\vfill % magic commands to vertically center the content
+    \begin{center}
+        \textbf{概要}
+    \end{center}
+    　絵を描くことは専門的な知識や技術を必要としたが, CGアートの発達により多くの人が自らの手で
+    作品を創り上げることが可能となった. また, AI技術の発達によって風景写真を芸術的なスタイルの
+    画像に変換できるようになり, ある画像の全体的な雰囲気を別の画像に移す研究も既に行われている.
+    しかし, クリエイターを支援するツールを作ることを考えると, 絵の全体的な雰囲気よりも, 絵を描
+    く際に用いたブラシのスタイルを移すことに需要があると考えられる.
+    本論文では, クリエイター支援ツールを作ることを目的に, スタイルの参照画像のブラシスタイルを
+    模倣したストロークの生成タスクに取り組んだ. ブラシのストローク予測モデルには, Transformerを
+    ベースとしたモデルを採用した.  提案モデルによる生成画像は参照画像のブラシスタイルを完全に
+    模倣したものとはならなかった. これは, ストロークを表現するパラメータの数が最低限であること
+    により, モデルの生成するストロークの表現力に限界があったことに起因するものだと考えられる.
 \vfill
 \pagebreak
 
@@ -102,9 +117,9 @@ CNNを用いて～～をつくることにしました。
     I would also like to express my sincere appreciation to Kaishang Chen and  Yu Yanagida 
     for their invaluable help in providing templates and setting up the necessary 
     environment for me when I started working on this paper. 
-    Lastly, I would like to express my heartfelt gratitude to my friends who provided 
-    emotional support during this difficult time of the pandemic. Their companionship 
-    and encouragement kept me going and helped me complete this work. 
+    Lastly, I would like to express my heartfelt gratitude to my family and friends 
+    who provided emotional support during this difficult time of the pandemic. 
+    Their companionship and encouragement kept me going and helped me complete this work. 
 
 
 
@@ -128,27 +143,6 @@ CNNを用いて～～をつくることにしました。
 \input{src/5_experiments_and_results}
 \input{src/6_discussions}
 
-
-
-
-% \section{はじめに}
-% \begin{figure}[t]
-%     \begin{center}
-%         \includegraphics[width=7cm]{image/syokuji_computer.png}
-%         \caption{パソコンの前でご飯を食べる人のイラスト}
-%         \label{fig:syokuji_computer}
-%     \end{center}
-% \end{figure}
-
-% パソコンの前でご飯を食べることはよくある。パソコンの前でご飯を食べる人のイラストを図\ref{fig:syokuji_computer}に示す。
-% このイラストは、規約の範囲内であれば、個人、法人、商用、非商用問わず無料で利用できることでおなじみの、{\bf かわいいフリー素材 いらすとや}\cite{irasutoya}より引用した。
-% \cite{liu2021paint}
-
-% \section{おわりに}
-% やっぱり{\bf いらすとや}のイラストはすばらしい。
-
-
-%% bib
 \printbibliography
 
 \end{document}

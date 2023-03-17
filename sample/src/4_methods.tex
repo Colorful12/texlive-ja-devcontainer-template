@@ -8,7 +8,7 @@ a pre-existing dataset of strokes, making it easy to train. Second, it uses
 FNNs rather than reinforcement learning, which allows for faster training and 
 more stable models.
 The Paint Transformer proposed in that paper is already briefly described in 
-Chapter 3. The loss function used in that model is described in Section 3.4 
+Chapter 3. The loss function used in that model is described in Section 4.4 
 of this chapter. 
 The model constructed by Liu \textit{et al} converts an input image into a 
 picture-like image drawn by human strokes, but  we aim to address a different 
@@ -16,8 +16,8 @@ problem: transforming the content of the input image to match the style of a
 reference image. Specifically, we want to modify the content image such that 
 it appears to have been painted with the same brushstrokes as the style image. 
 
-\section{Network structure}
-　Our proposed model utilizes the same Stroke Predictor and Stroke renderer 
+\section{Network Structure}
+　Our proposed model utilizes the same Stroke Predictor and Stroke Renderer 
 as the baseline model.
 A brief description of them was already given in Chapter 3, but we will explain
 the Stroke Predictor in more detail.
@@ -44,7 +44,7 @@ During the backward phase of training, the sigmoid function is used
 to compute gradients in order to enable backpropagation.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=110truemm]{resources/4_methods/StrokePredictor.png}
+    \includegraphics[width=110truemm]{resources/4_methods/StrokePredictor.pdf}
     \caption{
         Image of Stroke Predictor,
         taken from \cite{liu2021paint}.
@@ -58,7 +58,20 @@ However, we wanted to modify this process so that the content of
 the input image is transformed to match the style of a reference 
 image, rather than just producing a stroke representation of the 
 input image. To achieve this, we made changes to the process 
-generating paintings from new images.
+generating paintings from new images. 
+The structure of our proposed model is shown in Figure \ref{Struct_ourmodel}.
+The image $I_b$ is created from each base brush image, $G_g^b$ represents the 
+gram matrix of $I_b$, and $G_r$ represents the gram matrix of the style 
+reference image.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=135truemm]{resources/4_methods/construct_ourmodel.pdf}
+    \caption{
+        The structure of our proposed model.
+    }
+    \label{Struct_ourmodel}
+\end{figure}
 
 The baseline provided one brush image, which was used to generate 
 strokes by the Paint Transformer model. 
@@ -69,17 +82,17 @@ We then compared the style of the generated pictures to the style
 of the style reference image and selected the one with the 
 smallest loss as the final output image. 
 
-\section{Brush images}
-　Brush images used by the baseline and created by us are shown in Figure \ref{Brushes}.
-(a) is the brush image used by the baseline, which is a pair of vertical and 
+\section{Brush Images}
+　Brush images used by the baseline model and created by us are shown in Figure \ref{Brushes}.
+(a) is the brush image used by the baseline model, which is a pair of vertical and 
 horizontal strokes. 
 (b) and (c) are pairs of vertical and horizontal strokes, as was the baseline, 
 and subsequent brush images are composed of a single image.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=130truemm]{resources/4_methods/brushes.png}
+    \includegraphics[width=130truemm]{resources/4_methods/brushes.pdf}
     \caption{
-        Brushes we created
+        Diversity of brushes developed for more accurate representation of painting effects.
     }
     \label{Brushes}
 \end{figure}
@@ -102,7 +115,7 @@ It is expressed as :
 \end{equation}
 To measure the difference between two strokes, the L1 distance between two 
 strokes, which is a measure of the difference between the parameters of the 
-strokes, is defined. (Equation \ref{L1-distance})
+strokes, is defined. (Equation \eqref{L1-distance})
 \begin{equation}
     \label{L1-distance}
     \mathcal{D}_{L_1}^{u, v}=\left\|s_u-s_v\right\|_1
@@ -114,9 +127,9 @@ included. The Wasserstein distance is calculated using the Gaussian distribution
 of the strokes. 
 A rotational rectangular stroke with brush shape parameters ${x, y, w, h, \theta}$
 can be regarded as a two-dimensional Gaussian distribution $N(\mu, \sum)$ by the 
-Equation \ref{2D-GD}, and the Wasserstein Distance between two Gaussian 
+Equation \eqref{2D-GD}, and the Wasserstein Distance between two Gaussian 
 distributions $N(\mu_u, \sum_u)$ and $N(\mu_v, \sum_v)$ can be expressed as in 
-Equation \ref{Wasserstein}.
+Equation \eqref{Wasserstein}.
 \begin{equation}
     \label{2D-GD}
     \begin{aligned} \mu & =(x, y) \\ \boldsymbol{\Sigma}^{\frac{1}{2}} & =\left[\begin{array}{cc}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta\end{array}\right]\left[\begin{array}{cc}\frac{w}{2} & 0 \\ 0 & \frac{h}{2}\end{array}\right]\left[\begin{array}{cc}\cos \theta & \sin \theta \\ -\sin \theta & \cos \theta\end{array}\right] \\ & =\left[\begin{array}{cc}\frac{w}{2} \cos ^2 \theta+\frac{h}{2} \sin ^2 \theta & \frac{w-h}{2} \cos \theta \sin \theta \\ \frac{w-h}{2} \cos \theta \sin \theta & \frac{w}{2} \sin ^2 \theta+\frac{h}{2} \cos ^2 \theta\end{array}\right]\end{aligned}
@@ -125,7 +138,7 @@ Equation \ref{Wasserstein}.
     \label{Wasserstein}
     \mathcal{D}_W^{u, v}=\left\|\mu_u-\mu_v\right\|_2^2+\operatorname{Tr}\left(\boldsymbol{\Sigma}_u+\boldsymbol{\Sigma}_v-2\left(\boldsymbol{\Sigma}_u^{\frac{2}{2}} \boldsymbol{\Sigma}_v \boldsymbol{\Sigma}_u^{\frac{1}{2}}\right)^{\frac{1}{2}}\right)
 \end{equation}
-Additionally, binary cross entropy(Equation \ref{bce}) is used to match the confidence of the
+Additionally, binary cross entropy (Equation \eqref{bce}) is used to match the confidence of the
 predicted strokes with their ground truth labels. 
 For a predicted stroke $s_u$ with confidence $c_u$ and a target stroke $s_v$ 
 with ground truth label $g_v$,  $g_v$ will be equal to 1 if $s_v$ is a valid 
@@ -150,4 +163,9 @@ weighted by the weight terms  $\lambda_{L1}, \lambda_W$, and $\lambda_{bce}$.
         \end{gathered}
 \end{equation}
 
-【我々の損失関数】
+We adopted the $L1$ loss of the Gram matrix (Equation \eqref{gram}) as a loss function for measuring 
+the similarity of brush styles.
+By using the Gram matrix, it is possible to consider features over a wide range 
+of positions, and we considered it to be effective for dealing with brush styles.
+
+
