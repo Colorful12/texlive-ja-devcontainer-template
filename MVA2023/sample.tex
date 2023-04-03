@@ -6,6 +6,7 @@
 
 \documentclass{mva_style}
 \usepackage{graphicx}
+\usepackage{amsmath,amssymb, yhmath,bm} % for expectation sign
 
 
 \finalcopy %Uncomment this line for the Camera-Ready Manuscript
@@ -37,8 +38,7 @@
   already working as creators, such as changing images to artistic styles or 
   generating images based on text. In this study, we propose a model that 
   learns brush styles of human paintings and generates new input images that 
-  are redrawn using the learned brush styles. This model is expected to 
-  significantly streamline the process of picture creation for creators.
+  are redrawn using the learned brush styles. 
   The generated images by the proposed model are not perfect imitations of 
   the brush style of the reference image. This is thought to be caused by 
   the limitation of the model to generate flexible strokes due to minimal 
@@ -47,17 +47,13 @@
 }
 
 \section{Introduction}
-Humans have always found value in expressing their feelings and thoughts 
-through painting. In order to create excellent works of art, it is necessary 
-to learn composition, sketching techniques, colors, lighting effects, etc., 
-and it takes a long time to master these skills. However, with the 
+It is said that in order for people to paint a good picture, he or she needs 
+to master many techniques, which takes a long time. However, with the 
 advancements in machine learning, it is now possible for people without 
 painting skills to generate high-quality paintings. 
 For example, Midjourney\cite{Midjourney} is a software application that 
 allows users to create wonderful paintings by simply entering words, 
 sentences, or keywords that describe the image they wish to have painted. 
-Midjourney is popular and highly valued by creators due to its user-friendly 
-interface and high-quality results. 
 However, it is difficult to say that such a tool is useful for creators who 
 have already established their own style. For creators, it is important to 
 create works by their own hands, whether digital or analog, and a tool like 
@@ -89,18 +85,26 @@ image can be resolved with some modifications.
 
 \begin{figure}
   \centering
-  \includegraphics[width=83mm]{resource/haru.eps}
+  \includegraphics[width=70mm]{resource/haru.eps}
   \caption{Examples of input and output images of the model we would like to create.}
   \label{fig:haru}
 \end{figure}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=120mm]{resource/target_model.eps}
+  \caption{Structure of the target model.}
+  \label{fig:final_model}
+\end{figure*}
+
 
 \section{Related Works}
 The use of machine learning to generate paintings has been heavily researched 
 and has made significant progress. The method using neural networks as a 
 generative tool is typically formulated as a pixel-wise mapping \cite{PerceptualLosses} 
 or a continuous optimization process in pixel space \cite{ImageStyleTransfer}.
-However, it is difficult for neural networks to imitate the way humans both 
-create the final image and the process of drawing it. Humans typically start 
+However, it is difficult for a neural network to imitate the process that a 
+human draws. Humans typically start 
 by applying rough colors and then gradually adding details, while neural 
 networks generate images pixel by pixel. To imitate the human drawing 
 process, the machine would have the ability to decompose a given image into 
@@ -153,14 +157,49 @@ A stroke consists of eight parameters: center coordinates $x$, $y$, height $h$,
 width $w$, rotation angle $\theta$, and $r$, $g$, $b$ corresponding to RGB values 
 representing colors. Thus, stroke $s$ can be expressed as \{ $x$, $y$, $h$, $w$, $\theta$, $r$, $g$, $b$\}.
 The strokes rendered by Paint Transformer are monochromatic strokes that are 
-scaled, scaled, and rotated from the base brush image. 
+scaled and rotated from the base brush image. 
 Paint Transfomer generates multiple strokes based on eight randomly generated 
 parameters and uses them as a training dataset to train a stroke predictor. 
 Since the training dataset is generated randomly and automatically, there is 
 no need to prepare a dataset. 
 
-数学の話...(疑似latexを読んで)
-% 目標のモデルの構造を図\ref{fig:final_model}に示す. 図の上部はストロークパラメータの最適化, 下部はブラシパラメータの最適化の流れである. スタイル参照画像をPaint transformerに入力し, 出力結果を用いてブラシパラメータの最適化を行うことから始める. 次にコンテンツ参照画像をPaint transformerに入力するが, このときに先ほど最適化したブラシパラメータを用いる. その出力結果を用いてストロークパラメータの最適化を行う. これを交互に行うことを繰り返し, ブラシパラメータとストロークパラメータを最適なものに 近づけていく.
+The structure of the target model is shown in Figure \ref{fig:final_model}.
+The upper part of the figure shows the flow of brush parameter optimization and 
+the lower part shows the flow of stroke parameter optimization. First, the style 
+reference image is input to Paint Transformer, and the output results are used 
+to optimize the brush parameters. The optimization of brush parameters is 
+performed by the following equation.
+
+\begin{equation}
+  \phi = \mathop{\rm argmin}\limits_{\phi}(\mathop{\rm argmin}\limits_{e}(L(x^{\prime}, x)) + R(e))
+\end{equation}
+
+Here, $L$ is the content loss and $R$ is the stroke regularization term. By 
+inputting a style reference image $x$ as a content reference image into the 
+Paint Transformer and obtaining the result $x^{\prime}$, we can determine the 
+optimal stroke parameters $e$ and then use them, along with the regularization term, 
+to determine the optimal brush parameters $\phi$.
+Next, the content reference image is input to Paint Transformer. At this time, 
+the brush parameters optimized earlier are used. The output is used to optimize 
+the stroke parameters. The optimization of the stroke parameters is performed 
+using the following equation.
+
+\begin{equation}
+  e = \mathop{\rm argmin}\limits_{e}(L(y^{\prime}, y) + \psi(x, y^{\prime}))
+\end{equation}
+
+Here, $L$ is the content loss and $\psi$ is the style loss. These are used to 
+find the optimal stroke parameters $e$.
+The above two optimizations are repeated alternately to bring the brush and 
+stroke parameters closer to the optimum.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=80mm]{resource/brushes.eps}
+  \caption{Diversity of brushes developed for more accurate representation of painting effects.}
+  \label{fig:brushes}
+\end{figure}
+
 
 \subsection{Structure of the proposed model}
 As mentioned earlier, double optimization has not been implemented at this 
@@ -181,13 +220,11 @@ are the newly created ones. In (a)-(c), brush images are provided for each
 horizontal stroke and each vertical stroke.
 
 \begin{figure}[t]
-    \centering
-    \includegraphics[width=1.0\linewidth]{resource/brushes.eps}
-    \caption{Diversity of brushes developed for more accurate representation of painting effects.}
-    \label{fig:brushes}
+  \centering
+  \includegraphics[width=80mm]{resource/dataset.eps}
+  \caption{Content reference image and style reference image used in the experiment.}
+  \label{fig:inputs}
 \end{figure}
-
-
 
 \subsection{Loss Function}
 The $L1$ loss of the Gram matrix is employed as a loss function to evaluate 
@@ -196,10 +233,57 @@ the style reference image. We judged that the Gram matrix is suitable for
 the evaluation of brush styles because it allows us to consider a wide range 
 of image correlations.
 
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=80mm]{resource/results.eps}
+  \caption{Style reference image input to the model (top) and a partially enlarged image of the output from the model (bottom).}
+  \label{fig:result}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=60mm]{resource/cat-starry.eps}
+  \caption{Output image from Neural Style Transfer \cite{ImageStyleTransfer}.
+  The content and style reference images are (a) and (c) in Figure \ref{fig:inputs}, respectively.
+  }
+  \label{fig:cat-starry}
+\end{figure}
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=60mm]{resource/brush_discussion.eps}
+  \caption{Images of the brushes used in the proposed model (left), 
+  strokes drawn using Clip Studio Paint (lower right), 
+  and a brush image stretched to match the strokes drawn in Clip Studio Paint (upper right).}
+  \label{fig:discussion}
+\end{figure}
+
 \section{Experiments and Results}
+
 \subsection{Experiments}
+The proposed model takes a content reference image and a style reference image, 
+and outputs a result image. For the content images, we used one cat image from 
+The Oxford-IIIT Pet Dataset \cite{oxford-dataset} .
+The content reference image and style reference image used are shown in Figure \ref{fig:inputs}.
+% Image (b) is \textit{Composition with Red,
+% Blue, and Yellow} by Piet Mondrian, 1930. Image (c) is \textit{The Starry Night} 
+% by Vincent van Gogh, 1889.
+
 \subsection{Results}
-% 結果についてもう少し考察したほうがいいです。またもう少し結果をみせたほうがいいと思います 
+When the seven brush images shown in Figure \ref{fig:brushes} were used to 
+generate strokes that represent the content reference image shown in Figure 
+\ref{fig:inputs}, the image with the highest similarity to the style reference 
+image is shown in Figure \ref{fig:result}. 
+These brush styles are not very similar, which can be attributed to the fact 
+that there were only seven base brush images and the parameters used to represent 
+the strokes were minimal. It can be confirmed that the content of the output 
+image has not changed significantly from that of the content reference image.
+Image \ref{fig:cat-starry} is the output image when the content reference 
+image is input to Neural Style Transfer \cite{ImageStyleTransfer} with the 
+style image as (c) in Figure \ref{fig:inputs}. The brush style is imitated 
+with high accuracy, but the color has changed from the original content 
+reference image and the stars drawn in the style reference image have appeared.
 
 \section{Discussions}
 \subsection{Future Work}
@@ -208,7 +292,7 @@ to redraw the content drawn on the content reference image using the brush
 style of the style reference image. In the proposed model, since the stroke 
 prediction model was trained using Paint Transformer as it is, the stroke 
 parameters are the same as those of Paint Transformer, i.e., five shape 
-parameters and three color parameters, for a total of eight.In future studies, 
+parameters and three color parameters, for a total of eight. In future studies, 
 we believe that adding more parameters will enable more flexible brush stroke 
 representation. The strokes generated by the proposed model are created by 
 scaling and rotating the brush images shown in Figure\ref{fig:brushes}, but 
@@ -236,54 +320,6 @@ In addition, as described in section 5.1, the small number of stroke parameters
 is also considered to be a point to be improved. Therefore, it is expected 
 that the implementation of the dual optimization and improvement in the number 
 of parameters will also improve the accuracy of the brush style imitation.
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=1.0\linewidth]{resource/brush_discussion.eps}
-  \caption{Images of the brushes used in the proposed model (left), 
-  strokes drawn using Clip Studio Paint (lower right), 
-  and a brush image stretched to match the strokes drawn in Clip Studio Paint (upper right).}
-  \label{fig:discussion}
-\end{figure}
-
-
-% \begin{table}[t]
-%   \caption{Table caption.}
-%   \begin{center}
-%     \begin{tabular}{c | c c c}
-%       \hline
-%       \hline
-%       \makebox[10mm]{Table} & \makebox[10mm]{1st} & 
-%       \makebox[10mm]{2nd} & \makebox[10mm]{3rd}\\
-%       \hline
-%       1 & 1.0 & 0   & 0 \\
-%       2 & 0   & 2.0 & 0 \\
-%       3 & 0   & 0   & 3.0 \\
-%       \hline
-%       \hline
-%     \end{tabular}
-%     \label{sample-table}
-%   \end{center}
-% \end{table}
-
-% \begin{figure}[t]
-% \noindent
-% Long captions should be set as in
-%   \begin{center}
-%     \includegraphics[height=30mm]{fig2.eps}
-%   \end{center}
-%   \caption{
-%     This is an example of long caption requiring more than one line. 
-%     Long captions are placed beneath the figure with a 5 mm 
-%     additional margin on both sides.
-%   }
-%   \label{sample-figure2}
-% \end{figure}
-
-
-
-
-
 
 
 
@@ -345,6 +381,10 @@ puter Vision}, 2021.
 
 \bibitem{ClipStudio}
 “CLIP STUDIO PAINT,” Accessed: 2023-01-09. [Online]. Available: https://www.clipstudio.net/.
+
+\bibitem{oxford-dataset}
+O. M. Parkhi, A. Vedaldi, A. Zisserman, and C. V. Jawahar, “The
+oxford-iiit pet dataset,” [Online]. Available: https://www.robots.ox.ac.uk/~vgg/data/pets/.
 
 \end{thebibliography}
 
