@@ -7,12 +7,13 @@
 \documentclass{mva_style}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb, yhmath,bm} % for expectation sign
-
+\DeclareMathOperator*{\argmax}{arg\,max} \DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{microtype}
 
 \finalcopy %Uncomment this line for the Camera-Ready Manuscript
 
 \begin{document}
-\title{Brush Style Transfer with Feedforward Neural Networks}
+\title{Optimization-based Brush Style Transfer with Feedforward Neural Networks}
 
 \author{
   Saki Kohata\\
@@ -30,21 +31,37 @@
 
 \section*{\centering Abstract}
 \textit{
-  The emergence of machine learning has revolutionized the world of digital 
-  art, providing people with the ability to create highly polished images 
-  without advanced drawing skills. 
-  However, most of the studies that have been conducted to generate pictures 
-  using machine learning are not tools that can be used by people who are 
-  already working as creators, such as changing images to artistic styles or 
-  generating images based on text. In this study, we propose a model that 
-  learns brush styles of human paintings and generates new input images that 
-  are redrawn using the learned brush styles. 
-  The generated images by the proposed model are not perfect imitations of 
-  the brush style of the reference image. This is thought to be caused by 
-  the limitation of the model to generate flexible strokes due to minimal 
-  stroke parameters.
+Style transfer has emerged as a powerful way to perform advanced edits to
+images to match the style of a source image and has become a staple tool in
+artistic creation. However, such style transfer is usually treated as an
+image-to-image translation problem, where a myriad of losses and
+hyper-parameters are used for the user to attempt to modify a desired content
+image into the style of another style image.
+Instead of basing our approach on an image-to-image translation model, we
+leverage stroke based optimization approaches to learn an accurate stroke
+representation of the style image, and then repaint the content image using the
+learned stroke representation to reproduce it in the different style.
+Our approach is more flexible and interpretable than existing image-to-image
+based approaches, potentially opening up many different interactive usage
+scenarios.
+  %The emergence of machine learning has revolutionized the world of digital 
+  %art, providing people with the ability to create highly polished images 
+  %without advanced drawing skills. 
+  %However, most approaches focus o
+  %However, most of the studies that have been conducted to generate pictures 
+  %using machine learning are not tools that can be used by people who are 
+  %already working as creators, such as changing images to artistic styles or 
+  %generating images based on text. In this study, we propose a model that 
+  %learns brush styles of human paintings and generates new input images that 
+  %are redrawn using the learned brush styles. 
+  % ess: don't write limitations in the abstract
+  %The generated images by the proposed model are not perfect imitations of 
+  %the brush style of the reference image. This is thought to be caused by 
+  %the limitation of the model to generate flexible strokes due to minimal 
+  %stroke parameters.
   % Our model has the potential to significantly streamline the process of picture creation for creators, offering a powerful new tool for artists and designers alike.
 }
+
 
 \section{Introduction}
 It is said that in order for people to paint a good picture, they need 
@@ -82,23 +99,22 @@ reference image is created by the creator, the shape and color of the object
 can be controlled by the creator, and any dissatisfaction with the generated 
 image can be resolved with some modifications.
 
-
-\begin{figure}
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=83mm]{resource/haru.eps}
-  \caption{Examples of input and output images of the model we would like to create.}
+  \caption{Example of the goal of our research, where we wish to create a new image using the style and content of separate reference images.}
   \label{fig:haru}
 \end{figure}
 
 \begin{figure*}[t]
   \centering
   \includegraphics[width=166mm]{resource/target_model.eps}
-  \caption{The Brush Style Transfer model architecture.}
+  \caption{Overview of our proposed model architecture. We first learn a stroke representation $s^g$ from the style image via optimization, and then apply the learnt representation to modify the content image.}
   \label{fig:final_model}
 \end{figure*}
 
 
-\section{Related Works}
+\section{Related Work}
 The use of machine learning to generate paintings has been heavily researched 
 and has made significant progress. The method using neural networks as a 
 generative tool is typically formulated as a pixel-wise mapping \cite{PerceptualLosses} 
@@ -130,84 +146,74 @@ output image from the model.
 In this study, we aim to only transfer the style of the brush without changing 
 the contents and colors drawn in the content reference image. We addressed 
 this issue by adopting the Transformer-based stroke generation pipeline 
-proposed by Liu \textit{et al}.\cite{PaintTransformer} as a stroke prediction 
+proposed by Liu \textit{et al.}~\cite{PaintTransformer} as a stroke prediction 
 model for our proposed model.
 
-\section{Methodology}
-The proposed model utilizes a Transformer-based framework called Paint 
-Transformer proposed by Liu et al.\cite{PaintTransformer} as a stroke prediction 
-pipeline. The ultimate aim of this research is to create a model that can 
-redraw the content depicted in a content reference image using the brush 
-style of a style reference image. To achieve this goal, we used a method 
-of alternating optimization of stroke and brush parameters.
-Here, stroke parameters refer to parameters such as the color and size of 
-strokes that are different for each stroke, while brush parameters refer to 
-parameters common to all strokes, such as the base brush image.
+\section{Proposed Approach}
 
-Paint Transformer, used as a stroke prediction pipeline, is a Transformer-based 
-framework. This framework generates a sequence of strokes by predicting 
-stroke parameters of multiple strokes using a forward propagating transformer.
-Paint Transformer consists of two modules: a stroke predictor and a stroke 
-renderer. 
+Our approach consists of first finding a set of strokes $S_l$ and stroke style
+$\hat{s}_g$ that can represent a style image $I_{style}$. Afterwards, we then fix the
+stroke style $\hat{s}_g$ and find another set of strokes $S_l'$ to represent the
+content image with the style of the reference style image.
+An overview of our approach is shown in Figure \ref{fig:final_model}.
+
+\subsection{Framework}
+
+Our approach is built around a stroke prediction model $M$ that is able to
+recreate an image from a set of strokes $S_l$ and stroke style $s_g$.
+We first find a stroke style $\hat{s}_g$ by minimizing a loss function $L$ that
+measures the error between the stroke prediction model $M$ and target style
+image $I_{style}$:
+\begin{equation}
+  \hat{s}_g = \argmin_{s_g} \;
+      \min_{S_l} \;
+         L\left( M\left(S_l, s_g\right), I_{style}\right)
+  \label{eq_first}
+\end{equation}
+Afterwards, we fix the stroke style $\hat{s}_g$ and again minimize the stroke
+prediction error, but this time measured with the target content image
+$I_{comment}$:
+\begin{equation}
+  \hat{S}_l = \argmin_{S_l} (L(M(S_l, \hat{s}_g), I_{content}))
+  \label{eq_second}
+\end{equation}
+This resulting output image then simply computed by using the stroke prediction
+model with the optimal strokes $\hat{S}_l$ and stroke style $\hat{s}_g$:
+\begin{equation}
+   I_{output} = M( \hat{S}_l, \hat{s}_g )
+\end{equation}
+
+\subsection{Stroke Prediction Model}
+
+We utilize the Transformer-based framework called Paint Transformer proposed by
+Liu \textit{et al.}~\cite{PaintTransformer} as our stroke prediction model $M$.
+Paint Transformer is a Transformed-based framework that generates a sequence of
+strokes using a forward propagating transformer.  Paint Transformer consists of
+two modules: a stroke predictor and a stroke renderer. 
 A stroke consists of eight parameters: center coordinates $x$, $y$, height $h$,
 width $w$, rotation angle $\theta$, and $r$, $g$, $b$ corresponding to RGB values 
-representing colors. Thus, stroke $s$ can be expressed as \{ $x$, $y$, $h$, $w$, $\theta$, $r$, $g$, $b$\}.
-The strokes rendered by Paint Transformer are monochromatic strokes that are 
-scaled and rotated from the base brush image. 
-Paint Transfomer generates multiple strokes based on eight randomly generated 
-parameters and uses them as a training dataset to train a stroke predictor. 
-Since the training dataset is generated randomly and automatically, there is 
-no need to prepare a dataset. 
+representing colors, respectively. Each stroke $s$ can be expressed as $s = \{ x,
+y, h, w, \theta, r, g, b \}$. The strokes rendered by Paint
+Transformer are based on monochromatic strokes that are scaled and rotated from the base
+brush image and given colour. Paint Transformer generates multiple strokes based on eight
+randomly generated parameters and uses them as a training dataset to train a
+stroke predictor. Since the training dataset is generated randomly and
+automatically, there is no need to prepare a dataset. 
+
+\subsection{Stroke Styles}
 
 \begin{figure}
   \centering
   \includegraphics[width=80mm]{resource/brushes.eps}
-  \caption{Diversity of brushes developed for more accurate representation of painting effects.}
+  \caption{Diversity of brushes used in this work for more accurate representation of painting styles.}
   \label{fig:brushes}
 \end{figure}
 
-
 Paint Transformer used a single brush image to generate strokes. 
 We newly created six types of brush images. Figure \ref{fig:brushes} shows 
-the seven brush images. (a) is the brush image used by Liu et al. and (b)-(g) 
-are the newly created ones. In (a)-(c), brush images are provided for each 
-horizontal stroke and each vertical stroke.
-
-
-The Brush Style Transfer model architecture is shown in Figure \ref{fig:final_model}.
-The upper part of the figure shows the flow of brush parameter optimization and 
-the lower part shows the flow of stroke parameter optimization. 
-To perform Brush Style Transfer, we utilize seven brush images and execute 
-Paint Transformer algorithm seven times. The input image for each Paint Transformer 
-execution is the style reference image. We then calculate the style similarity 
-between the output images and the style reference image. Based on this similarity, 
-we determine the brush image that can draw brush strokes closest to the brush 
-style of the style reference image. Next, we use the content reference image as 
-the input image and execute Paint Transformer algorithm using the selected brush 
-image. The resulting output is an image that depicts the content of the 
-content reference image with the brush style of the style reference image.
-
-The parameter optimized in this process is denoted by $S$ and consists of 
-brush parameters $S^g$ and stroke parameters $S^l$. $S^g$ and $S^l$ are 
-represented as $S^g \in \{g_1,g_2,..,g_7\}$, $S^l=\{x, y, h, w, \theta, r, g, b\}$, 
-where $g_1, g_2,...g_7$ are each of the brush images.
-Since the brush parameters are common to all brush strokes, the i-th stroke 
-$S_i$ is represented as $S_i = {S_i^l, S^g}$. The optimization of brush 
-parameters and stroke parameters are performed by the following equations.
-
-\begin{equation}
-  S^g = \mathop{\rm argmin}\limits_{S^g}(\mathop{\rm min}\limits_{S_i^l}(L(\{\bar{S_i^l}, \bar{S^g}\}, I_{style})))
-  \label{eq_first}
-\end{equation}
-
-\begin{equation}
-  S_i^l = \mathop{\rm argmin}\limits_{S_i^l}(L(\{\bar{S_i^l}, S^g\}, I_{content}))
-  \label{eq_second}
-\end{equation}
-
-Here, $I_{style}$ and $I_{content}$  represent the style reference image and 
-content reference image, respectively. $S^g$ in Equation \eqref{eq_second} 
-refers to the $S^g$ calculated in Equation \eqref{eq_first}.
+the seven brush images. (a) is the brush image used by Liu \textit{et al.} and (b)-(g) 
+are the newly created ones. In (a)-(c), brush images are provided separately for
+horizontal and vertical strokes.
 % \begin{equation}
 %   \phi = \mathop{\rm argmin}\limits_{\phi}(\mathop{\rm argmin}\limits_{e}(L(x^{\prime}, x)) + R(e))
 % \end{equation}
@@ -260,8 +266,8 @@ refers to the $S^g$ calculated in Equation \eqref{eq_first}.
 \begin{figure}[t]
   \centering
   \includegraphics[width=80mm]{resource/results.eps}
-  \caption{(a) : Style reference image input to the model and a partially enlarged image of the output from the model.
-           (b) : Output image from Neural Style Transfer \cite{ImageStyleTransfer}.
+  \caption{(a) Style reference image input to the model and a partially enlarged image of the output from the model.
+           (b) Output image from Neural Style Transfer~\cite{ImageStyleTransfer}.
            The content and style reference images are (a) and (c) in Figure \ref{fig:inputs}, respectively.
          }
   \label{fig:result}
@@ -310,7 +316,7 @@ We used a Transformer-based framework called Paint Transformer to redraw the
 content drawn in the content reference image using the brush style of the 
 style reference image. In the proposed model, since the stroke 
 prediction model was trained using Paint Transformer as it is, the stroke 
-parameters are the same as those of Paint Transformer, i.e., five shape 
+parameters are the same as those of Paint Transformer, \textit{i.e.}, five shape 
 parameters and three color parameters, for a total of eight. In future studies, 
 we believe that adding more parameters will enable more flexible brush stroke 
 representation. The strokes generated by the proposed model are created by 
@@ -394,4 +400,3 @@ oxford-iiit pet dataset,” [Online]. Available: https://www.robots.ox.ac.uk/~vg
 
 
 \end{document}
-
