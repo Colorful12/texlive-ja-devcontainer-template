@@ -98,7 +98,7 @@ Liuらが提案した, Transformerをベースとしたストローク生成パ�
 提案モデルのストローク予測モデルに採用した. 
 
 \section{提案手法}
-提案手法の概要を図【】に示す. 
+提案手法の概要を図\ref{fig:final_model}に示す. 
 まず, スタイル画像 $I_{style}$ を表現するストロークパラメータ $S_l$ と
 ブラシスタイル $\hat{s}_g$ をみつける. 次に, ブラシスタイル $\hat{s}_g$ を固定し, 
 スタイル参照画像のブラシスタイルで描かれたコンテンツ画像を表現するためのストローク
@@ -120,7 +120,7 @@ $\hat{s}_g$ を定める:
     \label{eq_first}
 \end{equation}
 次に, ブラシスタイル $\hat{s}_g$ を固定し, 再びストローク誤差の最小化を行うが,
-今度はコンテンツ参照画像 $I_{comment}$ を対象とする: 
+今度はコンテンツ参照画像 $I_{content}$ を対象とする: 
 \begin{equation}
     \hat{S}_l = \argmin_{S_l} (L(M(S_l, \hat{s}_g), I_{content}))
     \label{eq_second}
@@ -132,7 +132,7 @@ $\hat{s}_g$ で表される最適なブラシスタイルによって計算さ�
 \end{equation}
  
 \subsection{ストローク予測モデル}
-ストローク予測モデル $M$ として, Liuら\cite{PaintTransformer}が提案したPaint transformer
+ストローク予測モデル $M$ として, Liuら\cite{PaintTransformer}が提案したPaint Transformer
 というTransformerベースのフレームワークを利用した. Paint Transformerは順伝播型変換器
 を用いてストローク列を生成するTransformerベースのフレームワークである.
 Paint Transformerは, ストローク予測器とストロークレンダラーの2つのモジュールから構成
