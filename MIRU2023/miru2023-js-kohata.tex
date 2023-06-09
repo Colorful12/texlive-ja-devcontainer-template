@@ -25,8 +25,8 @@
 高い絵を生成できるようになった.しかし, 機械学習を用いた絵の生成に取り組む
 研究のほとんどは画像をアーティスティックなスタイルに変更したり, テキスト
 をもとに画像を生成したりなど, 既にクリエイターとして働いている人が使える
-ツールであるとは言い難い. 本研究では, 人間が描いた絵のブラシスタイルを学習
-し, 新たな入力画像をその学習したブラシスタイルを用いて再描画した画像を生成
+ツールであるとは言い難い. 本研究では, 人間が描いた絵のブラシスタイルを最適化に
+よって推定し, 新たな入力画像をその推定したブラシスタイルを用いて再描画した画像を生成
 するモデルを提案する. これにより, クリエイターの絵の制作プロセスを大幅に
 効率化できることが期待される.
  
@@ -47,8 +47,8 @@ Midjourneyは, 使い方が簡単であることや生成された絵画が高�
 描かれたオブジェクトの形状や色合いなどに不満が残ると考えられるからである.
 私たちは, クリエイターが作業の途中に使えるような, 
 クリエイターの支援につながる研究を行いたいと考えた.
-そこで, クリエイターが描いた絵のブラシスタイルを学習し, そのブラシスタイルを
-新たな画像に適応するモデルを開発することを目標とした. 
+そこで, クリエイターが描いた絵のブラシスタイルを推定し, そのブラシスタイルを
+新たな画像に適応するモデルを開発することを目標とした.
 
 本研究で提案したいモデルは, コンテンツ参照画像とスタイル参照画像の
 2つの画像を入力とし, コンテンツ参照画像に描かれたものをスタイル参照画像の
@@ -59,7 +59,7 @@ Midjourneyは, 使い方が簡単であることや生成された絵画が高�
 質感のブラシを使用して作成したものであるため, 色と色の境界線をグラデーションに
 することも可能である.
 生成画像はコンテンツ参照画像に描かれたものをスタイル参照画像のブラシスタイルで
-表現したものとなっている. 図 1 に示すコンテンツ参照画像のような画像を簡単な
+表現したものとなっている. 図\ref{fig:haru}に示すコンテンツ参照画像のような画像を簡単な
 ブラシを用いて手動で作成し,それをモデルに入力してクリエイターのブラシスタイルで
 再描画させることで, クリエイターが絵の制作プロセスを大幅に効率化できることが期待
 される. コンテンツ参照画像はクリエイターが作成するものであるため, オブジェクトの
@@ -76,26 +76,36 @@ Midjourneyは, 使い方が簡単であることや生成された絵画が高�
     \centering
     \includegraphics[width=0.9\linewidth]{resource/target_model.pdf}
     \caption{提案モデルのアーキテクチャの概要. 
-    まず, 最適化を通じてスタイル画像からブラシパラメータ $s^g$ を学習し, 
-    学習したブラシパラメータを用いてコンテンツ画像を再描画する. 
+    まず, 最適化を通じてスタイル画像からブラシパラメータ $s^g$ を推定し, 
+    推定したブラシパラメータを用いてコンテンツ画像を再描画する. 
     }
     \label{fig:final_model}
 \end{figure*}
 
 \section{関連研究}
-画像のスタイル変換という分野では, ある画像から別の画像へのスタイルの転写に関する
-研究\cite{IST}が存在する. 提案されたモデルは風景写真をアーティスティックなスタイルに
-変換することを可能とするが, スタイル参照画像全体の雰囲気と色をコンテンツ参照画像
-にうつすものとなっている. そのため, コンテンツ参照画像には存在しない, 
-スタイル参照画像に描かれた特徴的なオブジェクトが, モデルからの出力画像に出現する.
-本研究では, コンテンツ参照に描かれた内容や色は変更せず, ブラシのスタイルのみを
-うつすことを目的としている. 
-Huangら\cite{Huang_2019_ICCV} と Liuら\cite{PaintTransformer}は, 
-入力画像に描かれた内容を描画するストロークを生成するモデルを提案した. 
-これらはいずれも指定されたブラシによるストロークを生成するものであり, 
-ブラシスタイルの模倣については取り扱っていない. 
-Liuらが提案した, Transformerをベースとしたストローク生成パイプラインを本研究における
-提案モデルのストローク予測モデルに採用した. 
+機械学習を用いた画像生成は盛んに研究されており, 大きな進歩を遂げている. 生成ツールとして
+ニューラルネットワークを用いる手法は, 一般的にピクセル単位のマッピング\cite{PerceptualLosses}
+やピクセル空間での連続的な最適化処理\cite{IST}として定式化されている.
+しかし, 人間が絵を描くプロセスをニューラルネットワークが模倣することは困難である. 人間は絵を描く際,
+まず大まかな色を塗ってから徐々に細部の描画に進んでいく方法が一般的だが, ニューラルネットワーク
+はピクセルごとに画像を生成する. 人間の描画プロセスを模倣するためには, 機械は与えられた画像を順序付けられた
+ストローク列に分解できなければならない. ニューラルネットワークは少ないストローク数でスケッチ
+\cite{DBLP:journals/corr/HaE17}, \cite{DBLP:journals/corr/abs-1805-00247}, 落書き
+\cite{DBLP:journals/corr/abs-1810-05977} を生成できるが, 特徴的なブラシスタイルで描かれた
+イラストを生成するにはより多くのストロークが必要である. ストロークの全てに損失関数の設定を行い, 
+ストロークの正解データを用意することは困難である. そのため, そのような画像のストローク分解を
+行う際には, 強化学習がよく使われる. \cite{DBLP:journals/corr/abs-1804-01118, DBLP:journals/corr/abs-1206-4634, Huang_2019_ICCV}
+強化学習エージェントの学習は計算コストが高いため, これをストロークパラメータ探索として定式化した研究も存在する. 
+\cite{PaintTransformer}
+本論文で扱うブラシのスタイル変換は, 絵画などの入力画像の全体的な雰囲気をCNNを用いて別の画像に転送
+するNeural Style Transfer\cite{IST}で扱っているものと似ている. 論文内で提案されたモデルは
+風景写真を芸術的なスタイルに変換することができるが, スタイル参照画像の全体的な雰囲気や色がコンテンツ参照
+画像に反映されている. そのため, スタイル参照画像には描かれているがコンテンツ参照画像には存在しない
+オブジェクトが, モデルからの出力画像に現れてしまう.
+本研究では, コンテンツ参照画像に描かれた内容や色は変えずに,
+ブラシのスタイルだけを転送することを目的としている. この問題にとりかかるにあたり, 
+Liuら\cite{PaintTransformer}が提案したTransformerをベースとしたストローク生成パイプラインを,
+提案モデルのストローク予測モデルとして採用した.
 
 \section{提案手法}
 提案手法の概要を図\ref{fig:final_model}に示す. 
@@ -130,6 +140,13 @@ $\hat{s}_g$ で表される最適なブラシスタイルによって計算さ�
 \begin{equation}
     I_{output} = M( \hat{S}_l, \hat{s}_g )
 \end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{resource/brushes.pdf}
+    \caption{スタイル参照画像のブラシスタイルを正確に模倣するために作成した複数のブラシ画像.}
+    \label{fig:brushes}
+\end{figure}
  
 \subsection{ストローク予測モデル}
 ストローク予測モデル $M$ として, Liuら\cite{PaintTransformer}が提案したPaint Transformer
@@ -151,15 +168,9 @@ Paint Transformerでは, 1種類のブラシ画像をベースとしてストロ
 画像を示す. (a)はLiuらが使用したブラシ画像であり, (b)～(g)が新たに作成したもの
 である. (a)～(c)は水平方向のストロークと垂直方向のストロークのそれぞれに
 ブラシ画像が用意されている. 
+
+
 \begin{figure}
-    \centering
-    \includegraphics[width=1.0\linewidth]{resource/brushes.pdf}
-    \caption{スタイル参照画像のブラシスタイルを正確に模倣するために作成した複数のブラシ画像.}
-    \label{fig:brushes}
-\end{figure}
-
-
-\begin{figure}[t]
     \centering
     \includegraphics[width=1.0\linewidth]{resource/inputimg.pdf}
     \caption{実験に用いたコンテンツ参照画像(上段)とスタイル参照画像(下段).}
@@ -206,8 +217,8 @@ Paint Transformerでは, 1種類のブラシ画像をベースとしてストロ
 提案した. 私たちは, コンテンツ参照画像に描かれた内容をスタイル参照画像のブラシスタイルを
 用いて再描画するために, Paint Transformer \cite{PaintTransformer} という
 Transformerベースのフレームワークを利用した. 
-提案モデルでは, Paint transformerをそのまま使用してストローク予測モデルを
-学習させたため, ストロークパラメータの種類もPaint transformerと同様であり,  
+提案モデルでは, Paint Transformerをそのまま使用してストローク予測モデルを
+学習させたため, ストロークパラメータの種類もPaint Transformerと同様であり,  
 5つの形状パラメータと3つの色パラメータの合計8つであった. 
 今後の研究では, より多くのパラメータを追加することによって, より柔軟なブラシ
 ストローク表現が可能になると考えられる. 提案モデルで生成されるストロークは, 
@@ -231,22 +242,57 @@ Transformerベースのフレームワークを利用した.
 \end{figure}
 %\input{example_paper_text_jp.tex}
 
+\newpage
 \bibliographystyle{miru2022j}
 \bibliography{myref}
 
-\begin{thebibliography}{9}% 文献数が10未満の時 {9}
+\begin{thebibliography}{10}% 文献数が10未満の時 {9}
 \bibitem{Midjourney}
 “Midjourney,” Accessed: 2023-01-09. [Online]. Available: https://midjourney.com/.
+
+\bibitem{PerceptualLosses}\sloppy
+J. Johnson, A. Alahi, and L. Fei-Fei, “Perceptual losses for real-time
+style transfer and super-resolution,” \textit{CoRR}, vol. abs/1603.08155, 2016.
+arXiv: 1603 . 08155. [Online]. Available: http://arxiv.org/abs/1603.08155.
 
 \bibitem{IST}
 L. A. Gatys, A. S. Ecker, and M. Bethge, “Image style transfer using
 convolutional neural networks,” in Proceedings of the IEEE Conference
 on Computer Vision and Pattern Recognition (CVPR), Jun. 2016.
 
+\bibitem{DBLP:journals/corr/HaE17}\sloppy
+D. Ha and D. Eck, “A neural representation of sketch drawings,” \textit{CoRR},
+vol. abs/1704.03477, 2017. arXiv: 1704 . 03477. [Online]. Available:
+http://arxiv.org/abs/1704.03477.
+
+\bibitem{DBLP:journals/corr/abs-1805-00247}
+J. Song, K. Pang, Y. Song, T. Xiang, and T. M. Hospedales, “Learning
+to sketch with shortcut cycle consistency,” \textit{CoRR}, vol. abs/1805.00247,
+2018. arXiv: 1805.00247. [Online]. Available: http://arxiv.org/abs/
+1805.00247.
+
+\bibitem{DBLP:journals/corr/abs-1810-05977}
+T. Zhou, C. Fang, Z. Wang, J. Yang, B. Kim, Z. Chen, J. Brandt,
+and D. Terzopoulos, “Learning to sketch with deep q networks and
+demonstrated strokes,” \textit{CoRR}, vol. abs/1810.05977, 2018. arXiv: 1810.
+05977. [Online]. Available: http://arxiv.org/abs/1810.05977.
+
+\bibitem{DBLP:journals/corr/abs-1804-01118}
+Y. Ganin, T. Kulkarni, I. Babuschkin, S. M. A. Eslami, and O. Vinyals,
+“Synthesizing programs for images using reinforced adversarial learn
+ing,” \textit{CoRR}, vol. abs/1804.01118, 2018. arXiv: 1804.01118. [Online].
+Available: http://arxiv.org/abs/1804.01118.
+
+\bibitem{DBLP:journals/corr/abs-1206-4634}
+N. Xie, H. Hachiya, and M. Sugiyama, “Artist agent: A reinforcement
+learning approach to automatic stroke generation in oriental ink paint
+ing,” \textit{CoRR}, vol. abs/1206.4634, 2012. arXiv: 1206 . 4634. [Online].
+Available: http://arxiv.org/abs/1206.4634.
+
 \bibitem{Huang_2019_ICCV}
 Z. Huang, W. Heng, and S. Zhou, “Learning to paint with model-based
-deep reinforcement learning,” in Proceedings of the IEEE/CVF International 
-Conference on Computer Vision (ICCV), Oct. 2019.
+deep reinforcement learning,” in \textit{Proceedings of the IEEE/CVF Inter
+national Conference on Computer Vision (ICCV)}, Oct. 2019.
 
 \bibitem{PaintTransformer}
 S. Liu, T. Lin, D. He, F. Li, R. Deng, X. Li, E. Ding, and H. Wang,
